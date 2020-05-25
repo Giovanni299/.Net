@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfDevicesDownloadConfiguration
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <DevicesDownloadConfiguration>
+    <SupportedDeviceTypes>
+      <DeviceTypeV10>ALPHA3</DeviceTypeV10>
+      <DeviceTypeV10>A1800</DeviceTypeV10>
+    </SupportedDeviceTypes>
+    <Variables>
+      <VariableDownloadConfiguration Name="TEST1" ProtocolCode="0ABE" DataTypeLength="0" Download="false" />
+      <VariableDownloadConfiguration Name="TEST2" ProtocolCode="0ABE" DataTypeLength="0" Download="false" />
+    </Variables>
+  </DevicesDownloadConfiguration>
+</ArrayOfDevicesDownloadConfiguration>

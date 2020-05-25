@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xsd:element name="ArrayOfDevicesDownloadConfiguration">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="unbounded" name="DevicesDownloadConfiguration">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="SupportedDeviceTypes">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" name="DeviceTypeV10" type="xsd:string" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="Variables">
+                <xsd:complexType mixed="true">
+                  <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" name="VariableDownloadConfiguration">
+                      <xsd:complexType>
+                        <xsd:attribute name="Name" type="xsd:string" use="required" />
+                        <xsd:attribute name="ProtocolCode" type="xsd:string" use="optional" />
+                        <xsd:attribute name="DataTypeLength" type="xsd:unsignedInt" use="optional" />
+                        <xsd:attribute name="Download" type="xsd:boolean" use="optional" />
+                        <xsd:attribute name="DownloadGroup" type="xsd:unsignedByte" use="optional" />
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xs:schema>

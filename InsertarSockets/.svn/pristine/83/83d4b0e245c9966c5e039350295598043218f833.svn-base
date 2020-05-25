@@ -1,0 +1,98 @@
+﻿<?xml version="1.0"?>
+<log4net>
+  <appender name="RollingFile" type="log4net.Appender.RollingFileAppender">
+    <filter type="log4net.Filter.LevelRangeFilter">
+      <levelMin value="DEBUG" />
+      <levelMax value="FATAL" />
+    </filter>
+    <file value="c:\temp\QueueClient.log" />
+    <appendToFile value="true" />
+    <maximumFileSize value="2000KB" />
+    <maxSizeRollBackups value="10" />
+
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date %level - %message%newline" />
+    </layout>
+  </appender>
+
+  <!--<appender name="AdoNetAppender" type="Primestone.PrimeRead.Infrastructure.Data.Core.PrimeBusAdoNetAppender">
+    <bufferSize value="1" />
+    <filter type="log4net.Filter.LevelRangeFilter">
+      <levelMin value="DEBUG" />
+      <levelMax value="ERROR" />
+    </filter>
+    <connectionType value="Dynamic"/>
+    <connectionString value="Dynamic"/>
+    <commandText value="INSERT INTO AUDIT_DB_ERROR_ADE (OBJECT_NAME_ADE,ERROR_LINE_ADE,ERROR_MESSAGE_ADE,INSERT_DATETIME,STACK_TRACE_ADE,LEVEL_ADE)
+     VALUES(:logger,:line, :message, :log_date, :exception,:log_level)" />
+    <parameter>
+      <parameterName value=":logger" />
+      <dbType value="String" />
+      <size value="200" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="PublisherService" />
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value=":line" />
+      <dbType value="Int32" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%line" />
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value=":message" />
+      <dbType value="String" />
+      <size value="4000" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%message" />
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value=":log_date" />
+      <dbType value="DateTime" />
+      <layout type="log4net.Layout.RawTimeStampLayout" />
+    </parameter>
+    <parameter>
+      <parameterName value=":exception" />
+      <dbType value="String" />
+      <size value="4000" />
+      <layout type="log4net.Layout.ExceptionLayout" />
+    </parameter>
+    <parameter>
+      <parameterName value=":log_level" />
+      <dbType value="String" />
+      <size value="50" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%level" />
+      </layout>
+    </parameter>
+  </appender>-->
+
+  <!--<appender name="SmtpAppender" type="log4net.Appender.SmtpAppender">
+    <to value="edgar.alvarez@primestone.com" />
+    <from value="edgaralvarez10@hotmail.com" />
+    <subject value="Service Bus Publisher Error" />
+    <smtpHost value="smtp.live.com" />
+    <bufferSize value="1" />
+    <lossy value="true" />
+    <username value="edgaralvarez10:hotmail.com" />
+    <password value="Overseas1"/>
+    <authentication value="Basic" />
+    <EnableSsl value="true" />
+    <port value="587" />
+    <evaluator type="log4net.Core.LevelEvaluator">
+      <threshold value="FATAL"/>
+    </evaluator>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%newline%date %thread %-5level %logger %property{NDC} - %message%newline%newline%newline" />
+    </layout>
+  </appender>-->
+
+  <root>
+    <level value="ALL" />
+    <appender-ref ref="RollingFile" />
+    <!--appender-ref ref="AdoNetAppender" /-->
+    <!--appender-ref ref="SmtpAppender" /-->
+  </root>
+</log4net>

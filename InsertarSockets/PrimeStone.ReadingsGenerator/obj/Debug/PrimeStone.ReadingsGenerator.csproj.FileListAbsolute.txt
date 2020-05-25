@@ -1,0 +1,55 @@
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\PrimeStone.ReadingsGenerator.exe.config
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Unity.config
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\App.config
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\PrimeStone.ReadingsGenerator.exe
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\PrimeStone.ReadingsGenerator.pdb
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Newtonsoft.Json.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeBus.ServiceContractsLibrary.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeRead.Domain.Core.Entities.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeRead.Infrastructure.CrossCutting.Core.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeRead.Infrastructure.Serialization.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeRead.Services.Legacy.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\RabbitMQ.Client.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\FeatureToggle.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeRead.Infrastructure.CrossCutting.Security.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\MsgPack.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeRead.Infrastructure.Queue.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeRead.Application.Core.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\FeatureToggle.Core.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\IBM.XMS.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\amqmdnet.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeRead.Infrastructure.CrossCutting.Globalization.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Newtonsoft.Json.xml
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeBus.ServiceContractsLibrary.pdb
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeRead.Domain.Core.Entities.pdb
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeRead.Infrastructure.CrossCutting.Core.pdb
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeRead.Infrastructure.Serialization.pdb
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeRead.Services.Legacy.pdb
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\RabbitMQ.Client.xml
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Microsoft.Practices.Unity.xml
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeRead.Infrastructure.CrossCutting.Security.pdb
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\MsgPack.xml
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeRead.Infrastructure.Queue.pdb
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeRead.Application.Core.pdb
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\Primestone.PrimeRead.Infrastructure.CrossCutting.Globalization.pdb
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\obj\Debug\PrimeStone.ReadingsGenerator.csprojResolveAssemblyReference.cache
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\obj\Debug\PrimeStone.ReadingsGenerator.PrincipalForm.resources
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\obj\Debug\PrimeStone.ReadingsGenerator.Properties.Resources.resources
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\obj\Debug\PrimeStone.ReadingsGenerator.csproj.GenerateResource.Cache
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\obj\Debug\PrimeStone.ReadingsGenerator.exe.licenses
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\obj\Debug\PrimeStone.ReadingsGenerator.exe
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\obj\Debug\PrimeStone.ReadingsGenerator.pdb
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\log4net.dll
+D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\log4net.xml
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\InsertarSockets\PrimeStone.ReadingsGenerator\bin\Debug\PrimeStone.ReadingsGenerator.exe.config
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\InsertarSockets\PrimeStone.ReadingsGenerator\obj\Debug\PrimeStone.ReadingsGenerator.csprojResolveAssemblyReference.cache
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\InsertarSockets\PrimeStone.ReadingsGenerator\obj\Debug\PrimeStone.ReadingsGenerator.PrincipalForm.resources
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\InsertarSockets\PrimeStone.ReadingsGenerator\obj\Debug\PrimeStone.ReadingsGenerator.Properties.Resources.resources
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\InsertarSockets\PrimeStone.ReadingsGenerator\obj\Debug\PrimeStone.ReadingsGenerator.csproj.GenerateResource.Cache
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\InsertarSockets\PrimeStone.ReadingsGenerator\obj\Debug\PrimeStone.ReadingsGenerator.exe.licenses

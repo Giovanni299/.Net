@@ -1,0 +1,1782 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Primestone.PrimeRead.Infrastructure.CrossCutting.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSBussinesException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSBussinesException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSBussinesException"/> class.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSBussinesException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSBussinesException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSBussinesException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSBussinesException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="inner">The inner.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSBussinesException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSBussinesException"/> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSException">
+            <summary>
+            Excepcion de PSTone.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSException.messageId">
+            <summary>
+            Id del mensaje de error.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSException.#ctor(System.Int32,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="messageId">Id del mensaje de error.</param>
+            <param name="message">Mensaje de error.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSException.#ctor(System.Int32,System.String,System.Exception)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="messageId">Id del mensaje de error.</param>
+            <param name="message">Mensaje de error.</param>
+            <param name="innerException">Excepcion interna.</param>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSException.MessageId">
+            <summary>
+            Identificador del error.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSException.CompleteMessage(System.Exception)">
+            <summary>
+            Retorna el mensaje completo para una excepcion.
+            </summary>
+            <param name="exception">Excepcion de la que se desea obtener el mensaje completo.</param>
+            <returns>Mensaje generado.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSPersistenceException">
+            <summary>
+            Clase que maneja las excepciones generadas en las transacciones 
+            entre la aplicacion y la base de datos.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSPersistenceException.messageId">
+            <summary>
+            Id del mensaje de error.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSPersistenceException.#ctor">
+            <summary>
+            Constructor por defecto.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSPersistenceException.#ctor(System.String)">
+            <summary>
+            Constructor con mensaje.
+            </summary>
+            <param name="message">Mensaje de error.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSPersistenceException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor con mensaje completo.
+            </summary>
+            <param name="message">Mensaje de error.</param>
+            <param name="inner">Excepcion interna.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSPersistenceException.#ctor(System.Int32,System.String,System.Exception)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="messageId">Id del mensaje de error.</param>
+            <param name="message">Mensaje de error.</param>
+            <param name="innerException">Excepcion interna.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSPersistenceException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Serializador de las excepciones.
+            </summary>
+            <param name="info">Objeto de tipo SerializationInfo.</param>
+            <param name="context">Objeto de tipo StreamingContext.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSPersistenceException.CompleteMessage(System.Exception)">
+            <summary>
+            Retorna el mensaje completo para una excepcion.
+            </summary>
+            <param name="exception">Excepcion de la que se desea obtener el mensaje completo.</param>
+            <returns>Mensaje generado.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Extensions.PSListExtensions">
+            <summary>
+            Extencion de lista.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Extensions.PSListExtensions.SplitInLists``1(System.Collections.Generic.List{``0},System.Int32)">
+            <summary>
+            Divice una lista en una lista de listas.
+            </summary>
+            <typeparam name="T">Tipo de dato.</typeparam>
+            <param name="list">Lista entera.</param>
+            <param name="count">Cantidad de elementos de la lista</param>
+            <returns>Lista de listas.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Extensions.PSStringExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Extensions.PSStringExtensions.MaxLength(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="s"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Extensions.PSStringExtensions.RemoveNonPrintableCharacters(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionExtensions.GetAttribute``1(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="member"></param>
+            <param name="isRequired"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionExtensions.GetPropertyDisplayName``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="propertyExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionExtensions.GetPropertyInformation(System.Linq.Expressions.Expression)">
+            <summary>
+            
+            </summary>
+            <param name="propertyExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper">
+            <summary>
+            Reflection Helper class.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.attributeCache">
+            <summary>
+            The attribute cache.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.AttributeCache">
+            <summary>
+            Gets the attribute cache.
+            </summary>
+            <value>
+            The attribute cache.
+            </value>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.GetPropertyName``1(System.Linq.Expressions.Expression{System.Func{``0}})">
+            <summary>
+            Get the Property Name.
+            </summary>
+            <typeparam name="T">The type.</typeparam>
+            <param name="expression">The expression.</param>
+            <returns>
+            The Property Name.
+            </returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.GetTypeAttributes``1" -->
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.GetTypeAttributes(System.Type)">
+            <summary>
+            Gets the type attributes.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.GetTypeAttributes``1(System.Type,System.Func{``0,System.Boolean})">
+            <summary>
+            Gets the type attributes.
+            </summary>
+            <typeparam name="TAttributeType">The type of the attribute type.</typeparam>
+            <param name="type">The type.</param>
+            <param name="predicate">The predicate.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.GetTypeAttributes``2(System.Func{``1,System.Boolean})">
+            <summary>
+            Gets the type attributes.
+            </summary>
+            <typeparam name="TType">The type of the type.</typeparam>
+            <typeparam name="TAttributeType">The type of the attribute type.</typeparam>
+            <param name="predicate">The predicate.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.GetTypeAttribute``2(System.Func{``1,System.Boolean})">
+            <summary>
+            Gets the type attribute.
+            </summary>
+            <typeparam name="TType">The type of the type.</typeparam>
+            <typeparam name="TAttributeType">The type of the attribute type.</typeparam>
+            <param name="predicate">The predicate.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.GetTypeAttribute``1(System.Type,System.Func{``0,System.Boolean})">
+            <summary>
+            Gets the type attribute.
+            </summary>
+            <typeparam name="TAttributeType">The type of the attribute type.</typeparam>
+            <param name="type">The type.</param>
+            <param name="predicate">The predicate.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.HasTypeAttribute``2(System.Func{``1,System.Boolean})">
+            <summary>
+            Determines whether [has type attribute] [the specified predicate].
+            </summary>
+            <typeparam name="TType">The type of the type.</typeparam>
+            <typeparam name="TAttributeType">The type of the attribute type.</typeparam>
+            <param name="predicate">The predicate.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.HasTypeAttribute``1(System.Type,System.Func{``0,System.Boolean})">
+            <summary>
+            Determines whether [has type attribute] [the specified type].
+            </summary>
+            <typeparam name="TAttributeType">The type of the attribute type.</typeparam>
+            <param name="type">The type.</param>
+            <param name="predicate">The predicate.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.GetMemberAttributes``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+            <summary>
+            </summary>
+            <typeparam name="TType">The type of the type.</typeparam>
+            <param name="action">The action.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.GetMemberAttributes``2(System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Func{``1,System.Boolean})">
+            <summary>
+            Gets the member attributes.
+            </summary>
+            <typeparam name="TType">The type of the type.</typeparam>
+            <typeparam name="TAttributeType">The type of the attribute type.</typeparam>
+            <param name="action">The action.</param>
+            <param name="predicate">The predicate.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.GetMemberAttribute``2(System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Func{``1,System.Boolean})">
+            <summary>
+            Gets the member attribute.
+            </summary>
+            <typeparam name="TType">The type of the type.</typeparam>
+            <typeparam name="TAttributeType">The type of the attribute type.</typeparam>
+            <param name="action">The action.</param>
+            <param name="predicate">The predicate.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.HasMemberAttribute``2(System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Func{``1,System.Boolean})">
+            <summary>
+            Determines whether [has member attribute] [the specified action].
+            </summary>
+            <typeparam name="TType">The type of the type.</typeparam>
+            <typeparam name="TAttributeType">The type of the attribute type.</typeparam>
+            <param name="action">The action.</param>
+            <param name="predicate">The predicate.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.GetMemberAttributes(System.Reflection.MemberInfo)">
+            <summary>
+            </summary>
+            <param name="memberInfo">The member information.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.GetMemberAttributes``1(System.Reflection.MemberInfo,System.Func{``0,System.Boolean})">
+            <summary>
+            Gets the member attributes.
+            </summary>
+            <typeparam name="TAttributeType">The type of the attribute type.</typeparam>
+            <param name="memberInfo">The member information.</param>
+            <param name="predicate">The predicate.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.GetMemberAttribute``1(System.Reflection.MemberInfo,System.Func{``0,System.Boolean})">
+            <summary>
+            Gets the member attribute.
+            </summary>
+            <typeparam name="TAttributeType">The type of the attribute type.</typeparam>
+            <param name="memberInfo">The member information.</param>
+            <param name="predicate">The predicate.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.HasMemberAttribute``1(System.Reflection.MemberInfo,System.Func{``0,System.Boolean})">
+            <summary>
+            Determines whether [has member attribute] [the specified predicate].
+            </summary>
+            <typeparam name="TAttributeType">The type of the attribute type.</typeparam>
+            <param name="memberInfo">The member information.</param>
+            <param name="predicate">The predicate.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.Where``2(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            </summary>
+            <typeparam name="X">The variable.</typeparam>
+            <typeparam name="TType">The type of the type.</typeparam>
+            <param name="list">The list.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.FirstOrDefault``2(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Firsts the or default.
+            </summary>
+            <typeparam name="X">The variable.</typeparam>
+            <typeparam name="TType">The type of the type.</typeparam>
+            <param name="list">The list.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.LockAndGetAttributes(System.Object,System.Func{System.Object,System.Object[]})">
+            <summary>
+            Locks the and get attributes.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="retrieveValue">The retrieve value.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.LockAndGet``2(System.Collections.Generic.Dictionary{``0,``1},``0,System.Func{``0,``1})">
+            <summary>
+            Method for thread safely executing slow method and storing the result in a dictionary .
+            </summary>
+            <typeparam name="TKey">The type of the key.</typeparam>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="dictionary">The dictionary.</param>
+            <param name="key">The key.</param>
+            <param name="retrieveValue">The retrieve value.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.ReflectionHelper.GetMember``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+            <summary>
+            Gets the member.
+            </summary>
+            <typeparam name="T">The type.</typeparam>
+            <param name="expression">The expression.</param>
+            <returns>
+            The type attributes.
+            </returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.TenantHelper">
+            <summary>
+            Contains the methods for handling with tenants configurations.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.TenantHelper.tenants">
+            <summary>
+            List of tenants.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.TenantHelper.Tenants">
+            <summary>
+            Tipos de alarmas.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.TenantHelper.GetTenant(System.String)">
+            <summary>
+            Returns the selected tenant from the list of tenants loaded form the tenant.xml file.
+            </summary>
+            <param name="tenantCode">Name of the tenant.</param>
+            <returns>The Tenant object representing the configuration on the tenant.xml.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Helpers.TenantHelper.LoadTenants">
+            <summary>
+            Loads the tenants file defined on the AppSetting "tenants".
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.IoC.IoCFactory">
+            <summary>
+            Fabrica con implementacion de IoC, para esta implementacion se usa Unity.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.IoC.IoCFactory.Log">
+            <summary>
+            Logger object.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.IoC.IoCFactory.unitySection">
+            <summary>
+            Contains the loaded configuration file.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.IoC.IoCFactory.containersDictionary">
+            <summary>
+            List of loaded containers.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.IoC.IoCFactory.#cctor">
+            <summary>
+            Constructor estatico que carga el diccionario de relaciones.
+            </summary>               
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.IoC.IoCFactory.Resolve``1">
+            <summary>
+            Retorna una instancia solicitada de acuerdo al diccionario de interfaces.
+            </summary>
+            <typeparam name="T">Tipo de instancia a retornar.</typeparam>
+            <returns>Instancia del tipo solicitado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.IoC.IoCFactory.Resolve``1(System.String)">
+            <summary>
+            Retorna la implementacion para la interfaz requerida.
+            </summary>
+            <typeparam name="T">Interfaz requerida.</typeparam>
+            <param name="containerName">Contenedor donde se enceuntra la informacion.</param>
+            <returns>Implementacion obtenida.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.IoC.IoCFactory.InitContainers">
+            <summary>
+            Metodo que inicializa el diccionario, para alambrar las relaciones.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PATHExtensions">
+            <summary>
+            Extension de strings para paths.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PATHExtensions.IsPathRelative(System.String)">
+            <summary>
+            Extension de un string para indicar si es un path relativo.
+            </summary>
+            <param name="path">String a revisar.</param>
+            <returns>Verdadero si es un path relativo.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PATHExtensions.GetCurrentApplicationPath">
+            <summary>
+            Llena el PSCache.ApplicationPath y retorna el Path.
+            </summary>
+            <returns>Retorna el path de Assembly.GetExecutingAssembly().</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache">
+            <summary>
+            Clase encargada de manejar el cache de la aplicacion.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.ApplicationPath">
+            <summary>
+            Path de la aplicacion.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.TraceFileName">
+            <summary>
+            Nombre del archivo de trace de la aplicacion.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.CallerServerHost">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.CallerServerWsSTGPort">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.CallerServerPublicHostIp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.FtpServerHost">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.FtpServerUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.FtpServerPassword">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.FtpServerPath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.UseBulkInsertsLp">
+            <summary>
+            Gets or sets de bulkinsert para perfilde carga.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.UseBulkInsertsRg">
+            <summary>
+            Gets or sets de bulkinsert para registros.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.UseBulkInsertsEv">
+            <summary>
+            Gets or sets de bulkinsert para eventos
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.DaysBefore">
+             <summary>
+            Gets or sets de Dias de antiguedad max para tablas standard lp.
+             </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.DaysAfter">
+            <summary>
+            Gets or sets de dias a futuro para tablas standard lp.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.HolesInserType">
+            <summary>
+            Gets or sets  de tipo de llenado con banderas iz.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.DateRegEvent">
+            <summary>
+            Gets or sets de fecha de antiguedad max para tablas standard registros y eventos.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.DaysRegEvent">
+            <summary>
+            Gets or sets de dias a futuro max para tablas standard registro y eventos.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.DeviceExist">
+            <summary>
+            Gets or Sets de devices exitentes en base de datos.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.ReloadDevices">
+            <summary>
+            Gets or sets si ha que actualizar el cache de devices.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.StandardLPOptimize">
+            <summary>
+            Indica si se debe realizar guardado en tabla alternativa de LP o no.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.StandardRegOptimize">
+            <summary>
+            Indica si se debe realizar guardado en tabla alternativa de Registers o no.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.StandardEvtOptimize">
+            <summary>
+            Indica si se debe realizar guardado en tabla alternativa de Events o no.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.errorConnectionOra">
+            <summary>
+            lista de errores por desonexion en oracle.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.errorConnectionSql">
+            <summary>
+            Error de Coneccion con sql.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.UserLoginId">
+            <summary>
+            Matiene el UserId.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.SetLastReadDate">
+            <summary>
+            Cantidad de dias que se atrasa la fecha de lastread a partir de la fecha de ahora.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.UseBulkInserts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.EnableSocketValidation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.RegEventLowerDate">
+            <summary>
+            Gets or Sets fecha minima de ingreso de lecturas para rg y ev.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.PSCache.CallerServerWsProgrammingDevicePort">
+            <summary>
+            Gets or sets the client server device program port.
+            </summary>
+            <value>
+            The client server device program port.
+            </value>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Serialization.XmlObjectSerializer">
+            <summary>
+            Clase encargada de manejar serializacion a xml de objetos.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Serialization.XmlObjectSerializer.Serialize(System.Object)">
+            <summary>
+            Serializes an object into an Xml Document.
+            </summary>
+            <param name="o">The object to serialize.</param>
+            <returns>An Xml Document consisting of said object's data.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Serialization.XmlObjectSerializer.Deserialize``1(System.Xml.XmlDocument)">
+            <summary>
+            Deserializes an xml document back into an object.
+            </summary>
+            <typeparam name="T">Tipo al que se debe deserializar.</typeparam>
+            <param name="xml">The xml data to deserialize.</param>
+            <returns>A deserialized object.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Serialization.XmlObjectSerializer.SerializeToXml(System.Object)">
+            <summary>
+            Serializa un objeto a string XML.
+            </summary>
+            <param name="o">Objeto a serializar.</param>
+            <returns>Texto en xml del objeto.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Serialization.XmlObjectSerializer.SerializeToXml1252(System.Object)">
+            <summary>
+            Serializa un objeto a string XML.
+            </summary>
+            <param name="o">Objeto a serializar.</param>
+            <returns>Texto en xml del objeto.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Serialization.XmlObjectSerializer.DeserializeFromXml``1(System.String)">
+            <summary>
+            Deserializa un objeto a partir de texto xml.
+            </summary>
+            <typeparam name="T">Tipo del objeto al que se desea deserializar.</typeparam>
+            <param name="xmlString">Texto en xml del objeto.</param>
+            <returns>Objeto deserializado.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.IniFile">
+            <summary>
+            Create a New INI file to store or load data.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.IniFile.#ctor(System.String)">
+            <summary>
+            INIFile Constructor.
+            </summary>
+            <param name="iniPath">Path del archivo ini.</param>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.IniFile.Path">
+            <summary>
+            Indica el path del archivo .ini.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.IniFile.IniWriteValue(System.String,System.String,System.String)">
+            <summary>
+            Write Data to the INI File.
+            </summary>
+            <param name="section">Section name.</param>
+            <param name="key">Key Name.</param>
+            <param name="value">Value Name.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.IniFile.IniReadValue(System.String,System.String,System.String)">
+            <summary>
+            Read Data Value From the Ini File.
+            </summary>
+            <param name="section">Sección del archivo.</param>
+            <param name="key">Clave dentro de la sección.</param>
+            <param name="defValue">Valor por defecto.</param>
+            <returns>Valor leido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.NativeMethods.WritePrivateProfileString(System.String,System.String,System.String,System.String)">
+            <summary>
+            Escribe un valor en el archivo .ini.
+            </summary>
+            <param name="section">Sección.</param>
+            <param name="key">Clave.</param>
+            <param name="val">Valor.</param>
+            <param name="filePath">Path del archivo.</param>
+            <returns>Valor indicando el resultado de la operación.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.NativeMethods.GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32,System.String)">
+            <summary>
+            Obtiene un valor de un archivo .ini.
+            </summary>
+            <param name="section">Sección.</param>
+            <param name="key">Clave.</param>
+            <param name="def">Valor por defecto.</param>
+            <param name="retVal">Valor a leer.</param>
+            <param name="size">Tamaño.</param>
+            <param name="filePath">Path del archivo.</param>
+            <returns>Valor indicando el resultado de la operación.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.PRIniFile">
+            <summary>
+            TODO: Update summary.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.PRIniFile.path">
+            <summary>
+            Path del archivo .ini.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.PRIniFile.file">
+            <summary>
+            Objeto para manejar el archivo .ini.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.PRIniFile.IniFile">
+            <summary>
+            Propiedad que permite exponer el archivo .ini.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.PRIniFile.GetValue(System.String,System.String,System.String)">
+            <summary>
+            Obtiene un valor del archivo .ini.
+            </summary>
+            <param name="section">Sección en el archivo.</param>
+            <param name="key">Clave dentro de la sección.</param>
+            <param name="defValue">Valor por defecto.</param>
+            <returns>Valor obtenido del archivo .ini.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.PRIniFile.SetValue(System.String,System.String,System.String)">
+            <summary>
+            Almacena un valor en el archivo .ini.
+            </summary>
+            <param name="section">Sección en el archivo.</param>
+            <param name="key">Clave en la sección.</param>
+            <param name="value">Valor a almacenar.</param>
+            <returns>Verdadero si pudo guardar el dato en el archivo ini.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.PSPathInstallation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.PSPathInstallation.GetInstallationPath(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="PathToSearch"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.RegistryHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.RegistryHelper.IIUSer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.RegistryHelper.AspnetUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.RegistryHelper.Everyone">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.RegistryHelper.PrimestoneDBRegistryDefaultPath">
+            <summary>
+            Ruta en el registro por defecto que se usa ra para almacenar la conexion a DB.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.RegistryHelper.SetRegistryPermissions(System.String)">
+            <summary>
+            Asegura los permisos sobre la llave que almacena la info de conexion a la DB.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Settings">
+            <summary>
+            Clase encargada de manejar los settings en el archivo de ocnfiguracion de la aplicacion.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Settings.#cctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Settings.ApplicationName">
+            <summary>
+            Nombre de la aplicacion.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Settings.GetValue(System.String,System.String)">
+            <summary>
+            Retorna un valor del archivo de configuracion.
+            </summary>
+            <param name="propertyName">Nombre de la propiedad que se desea buscar.</param>
+            <param name="defaultValue">Valor por defecto que se retorna en caso de no encontrarse. 
+            Si la propiedad no se encuentra se inserta el valor por defecto en el archivo.</param>
+            <returns>Valor encontrado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Settings.SetValue(System.String,System.String)">
+            <summary>
+            Establece un valor en el archivo de configuracion de la aplicacion.
+            </summary>
+            <param name="propertyName">Nombre de la propiedad a buscar.</param>
+            <param name="value">Valor a establecer.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Settings.SetUICultureValue(System.String)">
+            <summary>
+            Establece un valor en el archivo de configuracion de la aplicacion.
+            </summary>
+            <param name="value">Valor a establecer.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Settings.GetConnectionString(System.String)">
+            <summary>
+            Retorna un string de conexion a partir del archivo de ocnfiguracion.
+            </summary>
+            <param name="connectionStringName">Nombre del string de conexion.</param>
+            <returns>Settings del string de conexion encontrados. es Null si no existen.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Settings.SetConnectionString(System.String,System.String,System.String)">
+            <summary>
+            Establece un string de conexion y lo almacena en el archivo de configuracion de la aplicacion.
+            </summary>
+            <param name="connectionStringName">Nombre con el cual se almacena el string de conexion.</param>
+            <param name="connectionString">String de conexion.</param>
+            <param name="provider">Proveedor de la conexion.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Tenant">
+            <summary>
+            This class is instantiated by the tenant helper when the tenant.xml is loaded.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Tenant.Code">
+            <summary>
+            Tenant identifier used to match the Unity.xml with the Tenants.xml.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Tenant.ConnectionString">
+            <summary>
+            Database connection string. 
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Tenant.OdsConnectionString">
+            <summary>
+            ODS database connection string. 
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Tenant.DdsConnectionString">
+            <summary>
+            Dimensional database (Data warehouse) connection string. 
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Tenant.MdsConnectionString">
+            <summary>
+            MultiDimensional database (cubes) connection string. 
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Tenant.OdsProvider">
+            <summary>
+            ODS Database provider. 
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Tenant.DdsProvider">
+            <summary>
+            Dimensional Database provider. 
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Tenant.MdsProvider">
+            <summary>
+            Multidimensional Database provider. 
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Tenant.Provider">
+            <summary>
+            Transactional Database provider. 
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Settings.Tenant.CacheConnectionString">
+            <summary>
+            Cache server connection string. 
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.ToggleFeatures.AlarmWebServiceFeature">
+            <summary>
+            The AlarmWebServiceFeature class.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.ToggleFeatures.NotificationWebService">
+            <summary>
+            The NotificationWebService class.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.ToggleFeatures.PrimeCacheTierFeature">
+            <summary>
+            Simple Feature class.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ErrorTraceObject">
+            <summary>
+            Objeto para trace de errores.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ErrorTraceObject.ErrorId">
+            <summary>
+            Identificador del error.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ErrorTraceObject.ExtendedInfo">
+            <summary>
+            Informacion extendida del error.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ErrorTraceObject.MethodName">
+            <summary>
+            Nombre del metodo donde se genera el error.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ErrorTraceObject.Library">
+            <summary>
+            Libreria donde se genera el error.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ErrorTraceObject.ClassName">
+            <summary>
+            Nombre de la clase donde se genera el error.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup">
+            <summary>
+            Clase encargada de la escritura en archivos de texto, manteniendo backup.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.maxFileLength">
+            <summary>
+            Maximo tamanio del archivo.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.maxFileCount">
+            <summary>
+            Maximo conteo de archivos.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.fileDir">
+            <summary>
+            Directorio del archivo.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.fileBase">
+            <summary>
+            Nombre base del archivo.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.fileExt">
+            <summary>
+            Extension del archivo.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.fileDecimals">
+            <summary>
+            Decimales del archivo.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.canSplitData">
+            <summary>
+            Informa si se puede dividir la informacion.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.nextFileIndex">
+            <summary>
+            Index del siguiente archivo.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.#ctor(System.String,System.Int64,System.Int32,System.IO.FileMode)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="path">Direccion donde se quiere almacenar.</param>
+            <param name="maxFileLength">Maximo tamanio de archivo.</param>
+            <param name="maxFileCount">Maxima cantidad de archivos a almacenar.</param>
+            <param name="mode">Modo en el que se desea abrir el archivo.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.#ctor(System.String,System.Int64,System.Int32,System.IO.FileMode,System.IO.FileShare)">
+            <summary>
+            Cosntructor.
+            </summary>
+            <param name="path">Direccion donde se quiere almacenar.</param>
+            <param name="maxFileLength">Maximo tamanio de archivo.</param>
+            <param name="maxFileCount">Maxima cantidad de archivos a almacenar.</param>
+            <param name="mode">Modo en el que se desea abrir el archivo.</param>
+            <param name="share">Tipo de acceso al archivo.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.#ctor(System.String,System.Int64,System.Int32,System.IO.FileMode,System.IO.FileShare,System.Int32)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="path">Direccion donde se quiere almacenar.</param>
+            <param name="maxFileLength">Maximo tamanio de archivo.</param>
+            <param name="maxFileCount">Maxima cantidad de archivos a almacenar.</param>
+            <param name="mode">Modo en el que se desea abrir el archivo.</param>
+            <param name="share">Tipo de acceso al archivo.</param>
+            <param name="bufferSize">Tamanio del buffer.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.#ctor(System.String,System.Int64,System.Int32,System.IO.FileMode,System.IO.FileShare,System.Int32,System.Boolean)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="path">Direccion donde se quiere almacenar.</param>
+            <param name="maxFileLength">Maximo tamanio de archivo.</param>
+            <param name="maxFileCount">Maxima cantidad de archivos a almacenar.</param>
+            <param name="mode">Modo en el que se desea abrir el archivo.</param>
+            <param name="share">Tipo de acceso al archivo.</param>
+            <param name="bufferSize">Tamanio del buffer.</param>
+            <param name="isasync">Se debe trabajar asincronico o no.</param>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.CanRead">
+            <summary>
+            Indica si se puede leer o no.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.MaxFileLength">
+            <summary>
+            Maxima longitud del archivo.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.MaxFileCount">
+            <summary>
+            Maximo conteo de archivos.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.CanSplitData">
+            <summary>
+            Informa si se puede dividir o no la informacion.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Escribe el texto indicado al archivo.
+            </summary>
+            <param name="array">Arreglo de datos a almacenar.</param>
+            <param name="offset">Inicio en el arreglo.</param>
+            <param name="count">Cantidad de datos.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.BaseFileMode(System.IO.FileMode)">
+            <summary>
+            Retorna el modo de trabajo del archivo.
+            </summary>
+            <param name="mode">Modo de trabajo.</param>
+            <returns>Modo en el que se debe trabajar.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.Init(System.String,System.Int64,System.Int32,System.IO.FileMode)">
+            <summary>
+            Inicializa el stream.
+            </summary>
+            <param name="path">Ruta del achivo.</param>
+            <param name="maxFileLength">Maxima longitod del archivo.</param>
+            <param name="maxFileCount">Maximo conteo de archivos.</param>
+            <param name="mode">Modo de trabajo del archivo.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.BackupAndResetStream">
+            <summary>
+            Realiza un backUp y resetea el stream.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.FileStreamWithBackup.GetBackupFileName(System.Int32)">
+            <summary>
+            Obtiene el nombre del archivo de un backup.
+            </summary>
+            <param name="index">Index del archivo que se desea.</param>
+            <returns>String del archivo encontrado.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager">
+            <summary>
+            Contrato de tracing para desacoplar funcionalidad.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager.TraceStartLogicalOperation(System.String)">
+            <summary>
+            Comienza una operacion logica en el repositorio de trace.
+            </summary>
+            <param name="operationName">Nombre de la operacionq ue comenzo.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager.TraceStopLogicalOperation">
+            <summary>
+            Dectiene la operacion logica actual.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager.TraceStart">
+            <summary>
+            Envia una bandera de start al repositorio.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager.TraceStop">
+            <summary>
+            Envia una bandera de stop al repositorio.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager.TraceInfo(System.String,System.String)">
+            <summary>
+            Envia un trace de informacion al repositorio.
+            </summary>
+            <param name="message">Informacion a enviar.</param>
+            <param name="subCategory"></param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager.TraceWarning(System.String,System.String)">
+            <summary>
+            Envia un trace de warning al repositorio.
+            </summary>
+            <param name="message">Warning a enviar.</param>
+            <param name="subCategory"></param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager.TraceError(Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSException,System.String)">
+            <summary>
+            Envia un trace de error al repositorio.
+            </summary>
+            <param name="ex"></param>
+            <param name="subCategory"></param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager.TraceCritical(Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSException,System.String)">
+            <summary>
+            Envia un trace critico al repositorio.
+            </summary>
+            <param name="ex"></param>
+            <param name="subCategory"></param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager.TraceDebug(System.String,System.String)">
+            <summary>
+            Traces the debug.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="subCategory">The sub category.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITrailWriter">
+            <summary>
+            Esta interfaz es la que implementan los protocolos .Net.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITrailWriter.WriteLine(System.String)">
+            <summary>
+            Writes the line.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITrailWriter.WriteIncommingFrame(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Frame"></param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITrailWriter.WriteOutgoingFrameFrame(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Frame"></param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITrailWriter.WriteError(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Message"></param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITrailWriter.CommitMessages">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITrailWriter.BeginMessageToMemory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITrailWriter.CurrentSessionTrail">
+            <summary>
+            Gets the current session trail.
+            </summary>
+            <value>
+            The current session trail.
+            </value>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITrailWriterManager">
+            <summary>
+            Interfaz para escribir en el trail para protocolos de la PDA.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.Log4NetTracer">
+            <summary>
+            ItraceManager implementation for log4Net.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.Log4NetTracer.Log">
+            <summary>
+            The log
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.Log4NetTracer.TraceStartLogicalOperation(System.String)">
+            <summary>
+            Inicia el trace de una operacion logica.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.Log4NetTracer.TraceStopLogicalOperation">
+            <summary>
+            Detiene el trace de una operacion logica.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.Log4NetTracer.TraceStart">
+            <summary>
+            Innicia un trace.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.Log4NetTracer.TraceStop">
+            <summary>
+            Detiene un trace.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.Log4NetTracer.TraceInfo(System.String,System.String)">
+            <summary>
+            Realiza un trace de tipo inforamacion.
+            </summary>
+            <param name="message">Mensaje a guardar.</param>
+            <param name="subCategory">Subcategoria del mensaje.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.Log4NetTracer.TraceWarning(System.String,System.String)">
+            <summary>
+            Realiza el trace de un warning.
+            </summary>
+            <param name="message">Mensaje a guardar.</param>
+            <param name="subCategory">Subcategoria del mensaje.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.Log4NetTracer.TraceError(Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSException,System.String)">
+            <summary>
+            Realiza el trace de un error.
+            </summary>
+            <param name="ex">Excepcion a guardar.</param>
+            <param name="subCategory">Subcategoria de el mensaje.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.Log4NetTracer.TraceCritical(Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSException,System.String)">
+            <summary>
+            Realiza el trace de u error critico.
+            </summary>
+            <param name="ex">Excepcion a guardar.</param>
+            <param name="subCategory">Subcategoria del mensaje.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.Log4NetTracer.Dispose">
+            <summary>
+            Limpia la memoria de ste objeto.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.Log4NetTracer.TraceDebug(System.String,System.String)">
+            <summary>
+            Traces the debug.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="subCategory">The sub category.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.LoggingSettings">
+            <summary>
+            Clase encargada de cargar y guardar settings para logging.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.LoggingSettings.TraceInfo">
+            <summary>
+            Indica si se debe almacenar los trace de informacion.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.LoggingSettings.TraceWarning">
+            <summary>
+            Indica si se deben guardar los trace de warning.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.LoggingSettings.TraceError">
+            <summary>
+            Indica si se deben guardar los trace de Error.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.LoggingSettings.TraceCritical">
+            <summary>
+            Indica si se deben guardar los trace criticos.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.LoggingSettings.TraceFileName">
+            <summary>
+            Indica el nombre del archivo de trace.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.PSXmlTracer">
+            <summary>
+            Tracer en formato xml.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.PSXmlTracer.count">
+            <summary>
+            Conteo de lineas sin escribir.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.PSXmlTracer.tracer">
+            <summary>
+            Tracer de este objeto.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.PSXmlTracer.#ctor(System.String,System.Int64,System.Int32,System.IO.FileMode)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <param name="maxFileLength"></param>
+            <param name="maxFileCount"></param>
+            <param name="mode"></param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.PSXmlTracer.TraceStartLogicalOperation(System.String)">
+            <summary>
+            ealiza el trace de una operacion logica.
+            </summary>
+            <param name="operationName">Nombre de la operacion.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.PSXmlTracer.TraceStopLogicalOperation">
+            <summary>
+            Inicia el trace de una operacion logica.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.PSXmlTracer.TraceStart">
+            <summary>
+            Innicia un trace.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.PSXmlTracer.TraceStop">
+            <summary>
+            Detiene un trace.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.PSXmlTracer.TraceInfo(System.String,System.String)">
+            <summary>
+            Realiza un trace de tipo inforamacion.
+            </summary>
+            <param name="message">Mensaje a guardar.</param>
+            <param name="subCategory">Subcategoria del mensaje.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.PSXmlTracer.TraceWarning(System.String,System.String)">
+            <summary>
+            Realiza el trace de un warning.
+            </summary>
+            <param name="message">Mensaje a guardar.</param>
+            <param name="subCategory">Subcategoria del mensaje.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.PSXmlTracer.TraceError(Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSException,System.String)">
+            <summary>
+            Realiza el trace de un error.
+            </summary>
+            <param name="ex">Excepcion a guardar.</param>
+            <param name="subCategory">Subcategoria de el mensaje.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.PSXmlTracer.TraceCritical(Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Exceptions.PSException,System.String)">
+            <summary>
+            Realiza el trace de u error critico.
+            </summary>
+            <param name="ex">Excepcion a guardar.</param>
+            <param name="subCategory">Subcategoria del mensaje.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.PSXmlTracer.Dispose">
+            <summary>
+            Limpia la memoria de ste objeto.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.PSXmlTracer.TraceDebug(System.String,System.String)">
+            <summary>
+            Traces the debug.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="subCategory">The sub category.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TraceCategory">
+            <summary>
+            Enumeracion de categorias de trace.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TraceCategory.Information">
+            <summary>
+            Trace de informacion.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TraceCategory.Warning">
+            <summary>
+            Trace de warning.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TraceCategory.Error">
+            <summary>
+            Trace de error.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TraceCategory.Critical">
+            <summary>
+            Trace critico.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TraceHelper">
+            <summary>
+            Crea la Instancia de trail que se inicializa en el IoCFactory.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TraceHelper.GetTraceManager(System.String,System.Int64,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <param name="maxFileLength"></param>
+            <param name="maxFileCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TraceHelper.GetTrailWriterManager(System.String,System.Int64,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <param name="maxFileLength"></param>
+            <param name="maxFileCount"></param>
+            <param name="subCategory">Sub categoria del mensaje.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TraceObject">
+            <summary>
+            Objeto que se escribira en los trace.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TraceObject.Date">
+            <summary>
+            Fecha del trace.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TraceObject.Category">
+            <summary>
+            Categoria del trace.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TraceObject.SubCategory">
+            <summary>
+            Subcategoria del trace.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TraceObject.Message">
+            <summary>
+            Mensaje del trace.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TraceObject.ErrorObject">
+            <summary>
+            Objeto de error.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TrailWriterManager">
+            <summary>
+            Clase para escribir en el trail para protocolos de la PDA.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TrailWriterManager.subCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TrailWriterManager.SubCategory">
+            <summary>
+            Propiedad para exponer Cancel Order.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TrailWriterManager.#ctor(System.String,System.Int64,System.Int32,System.IO.FileMode)">
+            <summary>
+            Constructor de la clase TraceManagerPDA.
+            </summary>
+            <param name="path"></param>
+            <param name="maxFileLength"></param>
+            <param name="maxFileCount"></param>
+            <param name="mode"></param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TrailWriterManager.BeginMessageToMemory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TrailWriterManager.CommitMessages">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TrailWriterManager.WriteError(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Message"></param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TrailWriterManager.WriteIncommingFrame(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Frame"></param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TrailWriterManager.WriteLine(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TrailWriterManager.WriteOutgoingFrameFrame(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Frame"></param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp">
+            <summary>
+            Tracer en formato xml.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.sourceName">
+            <summary>
+            constante para el log de eventos.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.lockobj">
+            <summary>
+            Objeto para bloqeuar hilos.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.path">
+            <summary>
+            Ruta donde se debe escribir el archivo de trace.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.document">
+            <summary>
+            Documento xml para escribir los datos.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.maxFileLength">
+            <summary>
+            Maximo tamanio del archivo.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.maxFileCount">
+            <summary>
+            Maximo conteo de archivos.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.fileDir">
+            <summary>
+            Directorio del archivo.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.fileBase">
+            <summary>
+            Nombre base del archivo.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.fileExt">
+            <summary>
+            Extension del archivo.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.fileDecimals">
+            <summary>
+            Decimales del archivo.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.nextFileIndex">
+            <summary>
+            Index del siguiente archivo.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.#ctor(System.String,System.Int64,System.Int32,System.IO.FileMode)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="path">Ruta del archivo de trace.</param>
+            <param name="maxFileLength"></param>
+            <param name="maxFileCount"></param>
+            <param name="mode"></param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.WriteTraceObject(Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.TraceObject)">
+            <summary>
+            Escribe un objeto de trace en el archivo.
+            </summary>
+            <param name="traceObject">Objeto a escribir.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.Commit">
+            <summary>
+            Guarda la informacion que se enceuntra en memoria al archivo de trace.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.Dispose">
+            <summary>
+            Limpia la informacion en memoria de este objeto.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.Init(System.String,System.Int64,System.Int32,System.IO.FileMode)">
+            <summary>
+            Inicializa el stream.
+            </summary>
+            <param name="path">Ruta del achivo.</param>
+            <param name="maxFileLength">Maxima longitod del archivo.</param>
+            <param name="maxFileCount">Maximo conteo de archivos.</param>
+            <param name="mode">Modo de trabajo del archivo.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.GetBackupFileName(System.Int32)">
+            <summary>
+            Obtiene el nombre del archivo de un backup.
+            </summary>
+            <param name="index">Index del archivo que se desea.</param>
+            <returns>String del archivo encontrado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.BackupAndResetStream">
+            <summary>
+            Realiza un backUp y resetea el stream.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.XmlFileTracerWithBackUp.WriteEventLog(System.Exception)">
+            <summary>
+            Escribe en el event log.
+            </summary>
+            <param name="ex">Excepcion encontrada.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Serialization.JSONObjectSerializer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Serialization.JSONObjectSerializer.Deserialize``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Serialization.JSONObjectSerializer.Serialize``1(``0)">
+            <summary>
+            Serializes the specified object into json notation.
+            </summary>
+            <typeparam name="T">Type of the object to be serialized.</typeparam>
+            <param name="obj">The object to be serialized.</param>
+            <returns>The serialized object as a json string.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Serialization.JSONObjectSerializer.JDeserialize``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Serialization.JSONObjectSerializer.JSerialize``1(``0)">
+            <summary>
+            Serializes the specified object into json notation.
+            </summary>
+            <typeparam name="T">Type of the object to be serialized.</typeparam>
+            <param name="obj">The object to be serialized.</param>
+            <returns>The serialized object as a json string.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Tracing.PSEventListener">
+            <summary>
+            Clase encargada de realizar trace sobre los eventos del sistema.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Tracing.PSEventListener.eventLog">
+            <summary>
+            Log a guardar.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Tracing.PSEventListener.logType">
+            <summary>
+            Tipo de log.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Tracing.PSEventListener.#ctor(System.Diagnostics.EventLogEntryType,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="logType">Tipo de log.</param>
+            <param name="source">Origen del mensaje.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Tracing.PSEventListener.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Tracing.PSEventListener.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="name">Nombre del listener.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Tracing.PSEventListener.Write(System.String)">
+            <summary>
+            Escribe un mensaje en el listener.
+            </summary>
+            <param name="message">Mensaje a escribir.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Tracing.PSEventListener.WriteLine(System.String)">
+            <summary>
+            Escribe una linea en el listener.
+            </summary>
+            <param name="message">Mensaje a escribir.</param>
+        </member>
+    </members>
+</doc>

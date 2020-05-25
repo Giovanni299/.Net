@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.primestone.com/infrastructure" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.primestone.com/infrastructure" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.primestone.com/infrastructure/Imports">
+      <xsd:import schemaLocation="http://localhost/PrimeStonePublisher/PublishService.svc?xsd=xsd0" namespace="http://www.primestone.com/serviceBus" />
+      <xsd:import schemaLocation="http://localhost/PrimeStonePublisher/PublishService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/PrimeStonePublisher/PublishService.svc?xsd=xsd2" namespace="http://www.primestone.com/infrastructure" />
+      <xsd:import schemaLocation="http://localhost/PrimeStonePublisher/PublishService.svc?xsd=xsd3" namespace="http://www.primestone.com/2016/09/serviceBus" />
+      <xsd:import schemaLocation="http://localhost/PrimeStonePublisher/PublishService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPublisherService_ServiceStatus_InputMessage">
+    <wsdl:part xmlns:q1="http://www.primestone.com/serviceBus" name="parameters" element="q1:ServiceStatus" />
+  </wsdl:message>
+  <wsdl:message name="IPublisherService_ServiceStatus_OutputMessage">
+    <wsdl:part xmlns:q2="http://www.primestone.com/serviceBus" name="parameters" element="q2:ServiceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPublisherService_ClearStatus_InputMessage">
+    <wsdl:part xmlns:q3="http://www.primestone.com/serviceBus" name="parameters" element="q3:ClearStatus" />
+  </wsdl:message>
+  <wsdl:message name="IPublisherService_ClearStatus_OutputMessage">
+    <wsdl:part xmlns:q4="http://www.primestone.com/serviceBus" name="parameters" element="q4:ClearStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPublisherService_OnNewReading_InputMessage">
+    <wsdl:part name="parameters" element="tns:OnNewReading" />
+  </wsdl:message>
+  <wsdl:message name="IPublisherService_OnNewReading_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OnNewReadingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPublisherService_OnNewReadings_InputMessage">
+    <wsdl:part name="parameters" element="tns:OnNewReadings" />
+  </wsdl:message>
+  <wsdl:message name="IPublisherService_OnNewReadings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OnNewReadingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPublisherService_OnNewReadingsJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:OnNewReadingsJson" />
+  </wsdl:message>
+  <wsdl:message name="IPublisherService_OnNewReadingsJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OnNewReadingsJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPublisherService_Subscribe_InputMessage">
+    <wsdl:part name="parameters" element="tns:Subscribe" />
+  </wsdl:message>
+  <wsdl:message name="IPublisherService_Subscribe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPublisherService_UnSubscribe_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnSubscribe" />
+  </wsdl:message>
+  <wsdl:message name="IPublisherService_UnSubscribe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnSubscribeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPublisherService_InitializePublisher_InputMessage">
+    <wsdl:part name="parameters" element="tns:InitializePublisher" />
+  </wsdl:message>
+  <wsdl:message name="IPublisherService_InitializePublisher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InitializePublisherResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPublisherService">
+    <wsdl:operation name="ServiceStatus">
+      <wsdl:input wsaw:Action="http://www.primestone.com/serviceBus/IServiceInstrumentable/ServiceStatus" message="tns:IPublisherService_ServiceStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.primestone.com/serviceBus/IServiceInstrumentable/ServiceStatusResponse" message="tns:IPublisherService_ServiceStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearStatus">
+      <wsdl:input wsaw:Action="http://www.primestone.com/serviceBus/IServiceInstrumentable/ClearStatus" message="tns:IPublisherService_ClearStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.primestone.com/serviceBus/IServiceInstrumentable/ClearStatusResponse" message="tns:IPublisherService_ClearStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnNewReading">
+      <wsdl:input wsaw:Action="http://www.primestone.com/infrastructure/IPublisherService/OnNewReading" message="tns:IPublisherService_OnNewReading_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.primestone.com/infrastructure/IPublisherService/OnNewReadingResponse" message="tns:IPublisherService_OnNewReading_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnNewReadings">
+      <wsdl:input wsaw:Action="http://www.primestone.com/infrastructure/IPublisherService/OnNewReadings" message="tns:IPublisherService_OnNewReadings_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.primestone.com/infrastructure/IPublisherService/OnNewReadingsResponse" message="tns:IPublisherService_OnNewReadings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnNewReadingsJson">
+      <wsdl:input wsaw:Action="http://www.primestone.com/infrastructure/IPublisherService/OnNewReadingsJson" message="tns:IPublisherService_OnNewReadingsJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.primestone.com/infrastructure/IPublisherService/OnNewReadingsJsonResponse" message="tns:IPublisherService_OnNewReadingsJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Subscribe">
+      <wsdl:input wsaw:Action="http://www.primestone.com/infrastructure/IPublisherService/Subscribe" message="tns:IPublisherService_Subscribe_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.primestone.com/infrastructure/IPublisherService/SubscribeResponse" message="tns:IPublisherService_Subscribe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnSubscribe">
+      <wsdl:input wsaw:Action="http://www.primestone.com/infrastructure/IPublisherService/UnSubscribe" message="tns:IPublisherService_UnSubscribe_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.primestone.com/infrastructure/IPublisherService/UnSubscribeResponse" message="tns:IPublisherService_UnSubscribe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InitializePublisher">
+      <wsdl:input wsaw:Action="http://www.primestone.com/infrastructure/IPublisherService/InitializePublisher" message="tns:IPublisherService_InitializePublisher_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.primestone.com/infrastructure/IPublisherService/InitializePublisherResponse" message="tns:IPublisherService_InitializePublisher_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

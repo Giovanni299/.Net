@@ -1,0 +1,19 @@
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\bin\Debug\Newtonsoft.Json.xml
+D:\Sql\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\Sql\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\Sql\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\Sql\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\bin\Debug\Newtonsoft.Json.dll
+D:\Sql\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\bin\Debug\Newtonsoft.Json.pdb
+D:\Sql\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\bin\Debug\Newtonsoft.Json.xml
+D:\Sql\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojAssemblyReference.cache
+D:\Sql\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+D:\Sql\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CopyComplete
+D:\Sql\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\Sql\Projects\JSON_Readings\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

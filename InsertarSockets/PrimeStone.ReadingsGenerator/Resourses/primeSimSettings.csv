@@ -1,0 +1,21 @@
+Max. Iteration;100
+Tolerance;0.0001
+MVAbase;100
+NTL;0
+LoadParam;
+System Type;Pow
+Year;2017
+Month;3
+Start day;20
+End day;20
+Export type (1: Pgrid. 2:PRead);2
+System path;D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\PrimeSimulator\Output\System_0
+System name;PolishLP1.xls
+Reading path;..\..\Resourses\LoadPatterns
+Output path;D:\Repository_services\PrimeStone.ReadingsGenerator\PrimeStone.ReadingsGenerator\bin\Debug\PrimeSimulator\Output\System_0\Readings
+Load profile;all
+Inst proile;all
+LP log;1
+IP log;1
+Intervals;15
+multiplier;0.190360271460544

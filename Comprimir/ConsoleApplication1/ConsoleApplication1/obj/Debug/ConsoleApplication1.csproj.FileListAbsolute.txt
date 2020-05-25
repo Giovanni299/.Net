@@ -1,0 +1,8 @@
+D:\Sql\Projects\Comprimir\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\Sql\Projects\Comprimir\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\Sql\Projects\Comprimir\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\Sql\Projects\Comprimir\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+D:\Sql\Projects\Comprimir\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\Sql\Projects\Comprimir\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\Sql\Projects\Comprimir\ConsoleApplication1\ConsoleApplication1\bin\Debug\DotNetZip.dll
+D:\Sql\Projects\Comprimir\ConsoleApplication1\ConsoleApplication1\bin\Debug\DotNetZip.xml

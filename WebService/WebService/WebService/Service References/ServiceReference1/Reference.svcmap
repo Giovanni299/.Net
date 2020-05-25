@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ab2f4fae-afaa-4e54-95f1-ed89d6dd8902" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/TOUService/TOUService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TOUService.xsd" MetadataType="Schema" ID="840a9657-fa6d-4759-91e4-1c46896cf64e" SourceId="1" SourceUrl="http://localhost/TOUService/TOUService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TOUService1.xsd" MetadataType="Schema" ID="d07b8d6d-22f1-45b7-8ede-72576b0eea39" SourceId="1" SourceUrl="http://localhost/TOUService/TOUService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TOUService2.xsd" MetadataType="Schema" ID="7dd14343-2a5c-4276-8517-5a08cda1cc79" SourceId="1" SourceUrl="http://localhost/TOUService/TOUService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TOUService.wsdl" MetadataType="Wsdl" ID="efa6beda-39d0-4f8b-917a-90dde666257a" SourceId="1" SourceUrl="http://localhost/TOUService/TOUService.svc?wsdl" />
+    <MetadataFile FileName="TOUService.disco" MetadataType="Disco" ID="0c9bac26-2809-424e-8646-06dcfb6161d4" SourceId="1" SourceUrl="http://localhost/TOUService/TOUService.svc?disco" />
+    <MetadataFile FileName="TOUService1.wsdl" MetadataType="Wsdl" ID="5c91ebc1-6ba2-48f3-8081-b7052744cd69" SourceId="1" SourceUrl="http://localhost/TOUService/TOUService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

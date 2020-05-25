@@ -1,0 +1,4 @@
+[	  
+	  { "ReadingDate":"2018-08-15T23:00:00",  "UtcDate":"2018-08-16T04:00:00", "Demand":288, "DSTApplied":false, "Duration":0.0, "Flags":"", "ReadingDetail":63, "Channel":1, "LogNumber":1, "Millisecond":0, "ReadVal":388, "Second":0, "SocketName":"CIR2081526074", "DeviceName":"CIR2081526074", "Usage":488.0, "Value":588, "VariableName":1, "VariableCustomName":"UnpackerAMI", "Uom":1,"ReadingType":4, "ReadingOrigin":{"Date":"2017-04-04T00:00:00", "Workstation":"", "Type":1}, "DstInfo":null, "StringValue":"0.0", "VariableCode":null, "Tenant":null, "Interval":15	},
+	  	                                                     
+]                                                     

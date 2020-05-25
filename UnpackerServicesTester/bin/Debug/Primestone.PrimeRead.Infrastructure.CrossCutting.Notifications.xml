@@ -1,0 +1,3194 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications</name>
+    </assembly>
+    <members>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.FTP.FTPClient">
+            <summary>
+            Clase para descargar información de un servidor FTP.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.FTP.FTPClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.FTP.FTPClient" /> class.
+            </summary>
+            <param name="serverIP">The server ip.</param>
+            <param name="userName">Name of the user.</param>
+            <param name="password">The password.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.FTP.FTPClient.download(System.String,Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager)">
+            <summary>
+            Descarga el archivo remoteFile.
+            </summary>
+            <param name="remoteFile">The remote file.</param>
+            <param name="traceManager">The trace manager.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailSettings">
+            <summary>
+            Mail settings.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailSettings.User">
+            <summary>
+            Gets or sets the user.
+            </summary>
+            <value>
+            The user.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailSettings.From">
+            <summary>
+            Gets or sets from.
+            </summary>
+            <value>
+            From.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailSettings.Contact">
+            <summary>
+            Gets or sets the contact.
+            </summary>
+            <value>
+            The contact.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailSettings.Subject">
+            <summary>
+            Gets or sets the subject.
+            </summary>
+            <value>
+            The subject.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailSettings.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailSettings.AddToMessage">
+            <summary>
+            Gets or sets the add to message.
+            </summary>
+            <value>
+            The add to message.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailSettings.IsBodyHtml">
+            <summary>
+            Gets or sets a value indicating whether this instance is body HTML.
+            </summary>
+            <value>
+            <c>true</c> if this instance is body HTML; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailSettings.Host">
+            <summary>
+            Gets or sets the host.
+            </summary>
+            <value>
+            The host.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailSettings.PortMail">
+            <summary>
+            Gets or sets the port mail.
+            </summary>
+            <value>
+            The port mail.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailSettings.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>
+            The password.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailSettings.EnabledSsl">
+            <summary>
+            Gets or sets a value indicating whether [enabled SSL].
+            </summary>
+            <value>
+              <c>true</c> if [enabled SSL]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailOutBox">
+            <summary>
+            Clase encargada de manejar los mensajes de salida.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailOutBox.instance">
+            <summary>
+            Instancia para el singleton.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailOutBox.mailSettings">
+            <summary>
+            Array con settings básicos para establecer.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailOutBox.helper">
+            <summary>
+            Helper de correos.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailOutBox.traceManager">
+            <summary>
+            Manejador para el log.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailOutBox.#ctor(Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="traceManager">Objeto para el trai file.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailOutBox.Instance(Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager)">
+            <summary>
+            Retorna la instancia del singleto.
+            </summary>
+            <param name="traceManager">Objeto para el trai file.</param>
+            <returns>Instancia del objeto.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailOutBox.Instance(Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager,System.String[])">
+            <summary>
+            Retorna la instancia del singleto.
+            </summary>
+            <param name="traceManager">Objeto para el trai file.</param>
+            <param name="mailSets">Array con los parámetros básicos de envío de correos.</param>
+            <returns>Instancia del objeto.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailOutBox.ExecuteNotification">
+            <summary>
+            Ejecuta la notificacion.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailOutBox.Helper_OnSendMailCompleted(System.Object,System.ComponentModel.AsyncCompletedEventArgs)">
+            <summary>
+            Delegado para la terminacion del envio de mensajes.
+            </summary>
+            <param name="sender">Objeto que llama el delegado.</param>
+            <param name="e">Argumentos.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper">
+            <summary>
+            Clase para ayuda de envio de correos.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.Log">
+            <summary>
+            The log.
+            </summary>
+        </member>
+        <member name="E:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.OnSendMailCompleted">
+            <summary>
+            Evento que indica cuando un mail se envio correctamente.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.EnabledSsl">
+            <summary>
+            Verifica si el envio de correo requiere de un SSL.
+            </summary>
+            <value>
+            The enabled SSL.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.PortMail">
+            <summary>
+            Puerto de salida de correo.
+            </summary>
+            <value>
+            The port mail.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.From">
+            <summary>
+            Nombre o correo electronico del sender o remitente.
+            </summary>
+            <value>
+            From.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.Host">
+            <summary>
+            Servidor de correo para procesar el envio del correo electronico.
+            </summary>
+            <value>
+            The host.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.InHost">
+            <summary>
+            Servidor de entrada de correo para procesar el envio del correo electronico.
+            </summary>
+            <value>
+            The in host.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.User">
+            <summary>
+            Usuario con el que se autentica el aacesso al servidor de correo.
+            </summary>
+            <value>
+            The user.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.Password">
+            <summary>
+            Contraseña de acceso al servidor de correo.
+            </summary>
+            <value>
+            The password.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.InPort">
+            <summary>
+            Puerto de entrada del servidor de correo.
+            </summary>
+            <value>
+            The in port.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.Subject">
+            <summary>
+            Tema del correo electronico.
+            </summary>
+            <value>
+            The subject.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.Contact">
+            <summary>
+            Nombres o correos electronicos de los destinatarios.
+            </summary>
+            <value>
+            The contact.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.Message">
+            <summary>
+            Cuerpo o mensaje del correo electronico.
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.AddToMessage">
+            <summary>
+            String Anexado al cuerpo del correo electronico, sera agregada al final del cuerpo.
+            </summary>
+            <value>
+            The add to message.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.IsBodyHtml">
+            <summary>
+            Gets or sets the is body HTML.
+            </summary>
+            <value>
+            The is body HTML.
+            </value>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.SendMail(Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager)">
+            <summary>
+            Void Envia un correo en base a informacion configurada en el archivo de configuracion del sistema.
+            </summary>
+            <param name="traceManager">The trace manager.</param>
+            <exception cref="T:System.ArgumentException">TraceManager cannot be null.</exception>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.SendMail(Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.PSMessage,Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager)">
+            <summary>
+            Envia un mail.
+            </summary>
+            <param name="notification">Notifiacion que se desea enviar.</param>
+            <param name="traceManager">The trace manager.</param>
+            <exception cref="T:System.ArgumentException">TraceManager cannot be null
+            or
+            notification cannot be null.</exception>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.SendMail(Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.PSMessage,Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager,System.String[])">
+            <summary>
+            Envia un mail.
+            </summary>
+            <param name="notification">Notifiacion que se desea enviar.</param>
+            <param name="traceManager">The trace manager.</param>
+            <param name="mailSettings">Basic settings to send mails.</param>
+            <exception cref="T:System.ArgumentException">TraceManager cannot be null
+            or
+            notification cannot be null.</exception>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.Baseencode(System.String)">
+            <summary>
+            Baseencodes the specified cadena.
+            </summary>
+            <param name="cadena">The cadena.</param>
+            <returns>String in byte form.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.Basedecode(System.Byte[])">
+            <summary>
+            Basedecodes the specified cadena.
+            </summary>
+            <param name="cadena">The cadena.</param>
+            <returns>Byte in string form.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.GetAllMails">
+            <summary>
+            Retorna todos los mails encontrados en un correo.
+            </summary>
+            <returns>
+            Return message list.
+            </returns>
+            <exception cref="T:System.ArgumentException">InHost cannot be null
+            or
+            InPort cannot be null
+            or
+            User cannot be null
+            or
+            Password cannot be null.</exception>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.GetAllMails(System.String,System.String,System.String,Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager)">
+            <summary>
+            Retorna todos los emails encontrados en un correo con ssl.
+            </summary>
+            <param name="host">The host.</param>
+            <param name="user">The user.</param>
+            <param name="password">The password.</param>
+            <param name="trace">The trace.</param>
+            <returns>
+            Una lista con los email recibidos.
+            </returns>
+            <exception cref="T:System.ArgumentException">Trace cannot be null.</exception>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.PrintMessage(OpenPop.Mime.Message,Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager)">
+            <summary>
+            Registra en un archivo de trace la informacion de un email.
+            </summary>
+            <param name="email">El mensaje que se va a mostrar en el trace.</param>
+            <param name="trace">El trace.</param>
+            <exception cref="T:System.ArgumentException">Email cannot be null
+            or
+            trace cannot be null.</exception>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.RemoveMail(System.Int32)">
+            <summary>
+            Removes the mail.
+            </summary>
+            <param name="messageNumber">The message number.</param>
+            <exception cref="T:System.ArgumentException">InHost cannot be null
+            or
+            InPort cannot be null
+            or
+            User cannot be null
+            or
+            Password cannot be null.</exception>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.ValidateMailSettings">
+            <summary>
+            Validates the mail settings.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.Mail.MailHelper.CheckSettings">
+            <summary>
+            Revisa que los settings para el envio de correos sea correcto.
+            </summary>
+            <returns>
+            Verdadero si los settings son correctos.
+            </returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.OutBox">
+            <summary>
+            Clase que maneja una bandeja de salida.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.OutBox.outBoxMessage">
+            <summary>
+            Bandeja de mensjaes.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.OutBox.outBoxThread">
+            <summary>
+            Timer para la ejecucion de mensajes.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.OutBox.running">
+            <summary>
+            Indica si se esta ejecutando el envio.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.OutBox.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.OutBox.Interval">
+            <summary>
+            Intervalo de envio.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.OutBox.Type">
+            <summary>
+            Tipo de mensaje.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.OutBox.QOutBoxMessage">
+            <summary>
+            Bandeja de salida de mensajes.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.OutBox.SendMessage(Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.PSMessage)">
+            <summary>
+            Agrega la notificacion entrante a l abandeja de salida.
+            </summary>
+            <param name="notification">Notificacion que se desea enviar.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.OutBox.ExecuteNotification">
+            <summary>
+            Ejecuta las notificaciones en la bandeja de salida.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.OutBox.ExecuteOutBox">
+            <summary>
+            Ejecuta Los mensajes de salida.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.OutBox.ExecuteOutBox(System.String[])">
+            <summary>
+            Ejecuta Los mensajes de salida.
+            </summary>
+            <param name="mailSettings">Array con los parámetros básicos de envío de correos.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.PSMessage">
+            <summary>
+            Clase que maneja notificaciones.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.PSMessage.attachments">
+            <summary>
+            Lista de atachments que se agregaran al correo.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.PSMessage.Type">
+            <summary>
+            Tipo de la notificacion.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.PSMessage.Contact">
+            <summary>
+            Contacto al que se envia la notifiacion.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.PSMessage.Subject">
+            <summary>
+            Subject de la notifiacion.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.PSMessage.Content">
+            <summary>
+            Contenido de la notificacion.
+            </summary>c
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.PSMessage.IsBodyHtml">
+            <summary>
+            Gets or sets a value indicating whether this instance is body HTML.
+            </summary>
+            <value>
+            <c>true</c> if this instance is body HTML; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.PSMessage.Attachments">
+            <summary>
+            Lista de atachments que se agregaran al correo.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.MessageType">
+            <summary>
+            Tipo de notifiacion.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.MessageType.Sms">
+            <summary>
+            Notificacion SMS.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.MessageType.Mail">
+            <summary>
+            Notificacion Mail.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.MessageType.Phone">
+            <summary>
+            Notificacion telefonica.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSOutBox">
+            <summary>
+            Clase encargada de manejar la bandeja de salida de mensajes de texto.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSOutBox.instance">
+            <summary>
+            Instancia para singleton.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSOutBox.traceManager">
+            <summary>
+            Manager de trace.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSOutBox.#ctor(System.Int32,System.Int32,System.Int32,Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="port">Puerto que se desea usar.</param>
+            <param name="baudrate">Veocidad de transferencia de datos.</param>
+            <param name="timeout">Tiempo de espera.</param>
+            <param name="traceManager">The trace manager.</param>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSOutBox.Port">
+            <summary>
+            Puerto a usar.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSOutBox.BaudRate">
+            <summary>
+            Velocidad de transferencia.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSOutBox.TimeOut">
+            <summary>
+            Tiempo de espera.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSOutBox.Instance(System.Int32,System.Int32,System.Int32,Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager)">
+            <summary>
+            Instancia de la bandeja de salida para sms.
+            </summary>
+            <param name="port">Puerto que se desea usar.</param>
+            <param name="baudrate">Velocidad de transmision.</param>
+            <param name="timeout">Tiempo de espera.</param>
+            <param name="traceManager">The trace manager.</param>
+            <returns>
+            Instancia de la bandeja de salida.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSOutBox.ExtractMessage(Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.PSMessage)">
+            <summary>
+            Saca el mensaje a partir de una notificacion.
+            </summary>
+            <param name="notification">Nitificacion del cual se desea el mensaje.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSOutBox.ExecuteNotification">
+            <summary>
+            Ejecuta las notificaciones en la bandeja.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSHelper">
+            <summary>
+            Clase encargada de dar ayuda para envio de sms.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSHelper.instance">
+            <summary>
+            Instancia del helper.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSHelper.modem">
+            <summary>
+            Modem a usar.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSHelper.port">
+            <summary>
+            Puerto a usar.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSHelper.baudRate">
+            <summary>
+            Velocidad de transmision.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSHelper.timeOut">
+            <summary>
+            Tiempo de espera.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSHelper.traceManager">
+            <summary>
+            Manager de trace a usar.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSHelper.#ctor(System.Int32,System.Int32,System.Int32,Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="port">Puerto a usar.</param>
+            <param name="baudRate">Velocidad de transmision.</param>
+            <param name="timeOut">Tiempo de espera.</param>
+            <param name="traceManager">The trace manager.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSHelper.#ctor(Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSHelper.Instance(Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager)">
+            <summary>
+            Retorna la instancia del helper.
+            </summary>
+            <returns>Instancia existente.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSHelper.Instance(System.Int32,System.Int32,System.Int32,Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager)">
+            <summary>
+            Retorna la instancia del objeto de acuerdo a los parametros indicados.
+            </summary>
+            <param name="port">Puerto para creacion.</param>
+            <param name="baudRate">Baudios usados.</param>
+            <param name="timeOut">Timeout de la conexion.</param>
+            <param name="traceManager">The trace manager.</param>
+            <returns>
+            Helper creado.
+            </returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSHelper.SendSMS(Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.PSMessage)">
+            <summary>
+            Void Envia un SMS en base a informacion configurada en el archivo de configuracion del sistema.
+            </summary>
+            <param name="message">Mensaje que se desea enviar.</param>
+            <returns>Indica si el mensaje se pudo enviar correctamente.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSHelper.CheckPhone(System.String)">
+            <summary>
+            Revisa que el telefono este correctamente escrito.
+            </summary>
+            <param name="phone">Telefono a refisar.</param>
+            <returns>Verdadero si estaba correctamente escrito.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSHelper.CreatePort">
+            <summary>
+            Crea el modem de acuerdo a los settings establecidos.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.SMSHelper.OpenPortCom">
+            <summary>
+            Abre el puerto del modem.
+            </summary>
+            <returns>Falso si no logro abrir el puerto.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem">
+            <summary>
+            Clase para manejo de modems  GSM.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.portNum">
+            <summary>
+            Numero del puerto.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.baudRate">
+            <summary>
+            Baudios de la conexion.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.timeOut">
+            <summary>
+            Tiempo de espera para terminar el envio.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.port">
+            <summary>
+            Puerto para enviod e informacion.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.sendData">
+            <summary>
+            Datos a enviar.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.receivedData">
+            <summary>
+            Datos recibidos.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.endTime">
+            <summary>
+            Tiempo de temrinacion.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.traceManager">
+            <summary>
+            Trace manager a usar.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.#ctor(Primestone.PrimeRead.Infrastructure.CrossCutting.Core.Tracing.ITraceManager,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="traceManager">Trace manager a usar.</param>
+            <param name="portNum">Numero del puerto.</param>
+            <param name="baudRate">Baudios para la conexion.</param>
+            <param name="timeout">Timeout de la conexion.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.IsOpen">
+            <summary>
+            Revisa si el puerto se encuentra abierto.
+            </summary>
+            <returns>Faslo o verdadero deaceurdo al estado del puerto.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.Open">
+            <summary>
+            Abre el puerto.
+            </summary>
+            <returns>Verdadero si el puerto se pudo abrir.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.Close">
+            <summary>
+            Cierra el puerto.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.SendMessage(System.String,System.String)">
+            <summary>
+            Envia un mensaje.
+            </summary>
+            <param name="message">Mensaje a enviar.</param>
+            <param name="phoneNumber">Numero de telefono.</param>
+            <returns>Indica si se logro enviar o no el mensaje.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.ActivatePDU">
+            <summary>
+            Activa el manejo de PDU.
+            </summary>
+            <returns>Verdadero si se pudo activar.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.Send(System.String,System.String)">
+            <summary>
+            Envia un comando, y compara el resultado contra un string indicado.
+            </summary>
+            <param name="command">Comando a enviar.</param>
+            <param name="match">String contra el cual comparar.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.CheckConnection">
+            <summary>
+            Revisa el estado de la conexion.
+            </summary>
+            <returns>Falso o verdadero de aceurdo al estado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.Send(System.String)">
+            <summary>
+            Envia un commando por el modem.
+            </summary>
+            <param name="command">Comando a enviar.</param>
+            <returns>Indica si se pudo o no enviar el mensaje.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.OpenPort">
+            <summary>
+            Abre el puerto del modem.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.DataReceived(System.Object,System.IO.Ports.SerialDataReceivedEventArgs)">
+            <summary>
+            Recibe datos del modem.
+            </summary>
+            <param name="sender">Objeto que recibe los datos.</param>
+            <param name="e">Argumentos de la recepcion.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.GSMModem.SendMessage(System.String,System.Int32)">
+            <summary>
+            Envia un mensaje a travez del modem.
+            </summary>
+            <param name="pduString">PDU que se desea enviar.</param>
+            <param name="length">Longitud del mensaje.</param>
+            <returns>Indica si se pudo o no enviar el mensaje.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType">
+            <summary>
+            Calse encargada de manejar el tipo de direccion.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.InternationalPhone">
+            <summary>
+            Numero de telefono internacional.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.Unknown">
+            <summary>
+            Desconocido.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.UnknownPhone">
+            <summary>
+            Indica si es un numero desconocido.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.bit7">
+            <summary>
+            Indica si es de 7 bit.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.#ctor(System.Byte)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="toa">Inicializa el objeto a partyr de un abyte de direccion.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.NumberingPlan">
+            <summary>
+            Enumeracion para el plan de la direccion.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.NumberingPlan.Data">
+            <summary>
+            Plan Data.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.NumberingPlan.Ermes">
+            <summary>
+            Plan Ernes.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.NumberingPlan.National">
+            <summary>
+            Plan National.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.NumberingPlan.Private">
+            <summary>
+            Plan Private.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.NumberingPlan.Reserved">
+            <summary>
+            Plan Reserved.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.NumberingPlan.Telephone">
+            <summary>
+            Plan Telephone.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.NumberingPlan.Telex">
+            <summary>
+            Plan Telex.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.NumberingPlan.Unknown">
+            <summary>
+            Plan Desconocido.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.TypeOfNumber">
+            <summary>
+            Enumeracion para definir el tipo de numero.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.TypeOfNumber.Abbreviated">
+            <summary>
+            Tipo abreviado.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.TypeOfNumber.Alphanumeric">
+            <summary>
+            Tipo alfanumerico.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.TypeOfNumber.International">
+            <summary>
+            Tipo internacional.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.TypeOfNumber.National">
+            <summary>
+            Tipo nacional.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.TypeOfNumber.NetworkSpecific">
+            <summary>
+            Tipo de red especifica.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.TypeOfNumber.Reserved">
+            <summary>
+            Tipo reservado.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.TypeOfNumber.Subscriber">
+            <summary>
+            Tipo subscriptor.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.TypeOfNumber.Unknown">
+            <summary>
+            Tipo desconocido.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.Npi">
+            <summary>
+            Npi de la direccion.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.Ton">
+            <summary>
+            Ton de la direccion.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.op_Implicit(Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType)~System.Byte">
+            <summary>
+            Sobrecarga de operador Byte.
+            </summary>
+            <param name="a">Addres que se desea convertir a byte.</param>
+            <returns>Byte a partir de la direccion.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.op_Implicit(System.Byte)~Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType">
+            <summary>
+            Sobrecarga operador AddressType.
+            </summary>
+            <param name="toa">Byte que se desea convertir a AddressType.</param>
+            <returns>Addres type obtenido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.AddressType.ToByte">
+            <summary>
+            Convierte el objeto a byte.
+            </summary>
+            <returns>Byte obtenido.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.BcdWorker">
+            <summary>
+            Helper para BCD.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.BcdWorker.CountBytes(System.String)">
+            <summary>
+            Conteo de bytes.
+            </summary>
+            <param name="s">String con los bytes.</param>
+            <returns>Bytes contados.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.BcdWorker.DecodeSemiOctets(System.String)">
+            <summary>
+            Decodifica semioctetos.
+            </summary>
+            <param name="data">Datos con los semioctetos.</param>
+            <returns>String Decodificado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.BcdWorker.EncodeSemiOctets(System.String)">
+            <summary>
+            Codifica Semioctetos.
+            </summary>
+            <param name="data">Datos a codificar.</param>
+            <returns>Semioctetos resultantes.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.BcdWorker.EncodeSemiOctets(System.String,System.Int32)">
+            <summary>
+            Codifica semioctetos.
+            </summary>
+            <param name="data">Datos  a codificar.</param>
+            <param name="totalWidth">Ancho total.</param>
+            <returns>Semioctetos codificados.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.BcdWorker.GetByte(System.String,System.Int32)">
+            <summary>
+            Obtiene el byte de un string.
+            </summary>
+            <param name="s">String con los datos.</param>
+            <param name="index">Index donde comienzan los datos.</param>
+            <returns>Byte obtenido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.BcdWorker.GetBytes(System.String,System.Int32,System.Int32)">
+            <summary>
+            Otiene arreglo de bytes de un string.
+            </summary>
+            <param name="s">String con los datos.</param>
+            <param name="index">Index donde comienzan los datos.</param>
+            <param name="length">Longitud de los datos.</param>
+            <returns>Arreglo con los bytes obtenidos.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.BcdWorker.GetBytesString(System.String,System.Int32,System.Int32)">
+            <summary>
+            Retorna una lysta de bytes en un string.
+            </summary>
+            <param name="s">String con los datos.</param>
+            <param name="index">Index de los datos.</param>
+            <param name="length">Longitud de los datos.</param>
+            <returns>String con los bytes obtenidos.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.BcdWorker.GetByteString(System.String,System.Int32)">
+            <summary>
+            Retorna un byte en un string.
+            </summary>
+            <param name="s">String con los datos.</param>
+            <param name="index">Index donde comienzan los datos.</param>
+            <returns>String con el byte encontrado.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.Calc">
+            <summary>
+            Clase  encargada de calcular binarios y hexas.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.Calc.hexDigits">
+            <summary>
+            Digitos hexa validos.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.Calc.BinToInt(System.String)">
+            <summary>
+            Conviete un binario a un entero.
+            </summary>
+            <param name="s">String con el binario a convertir.</param>
+            <returns>Entero obtenido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.Calc.HexToInt(System.String)">
+            <summary>
+            Convierte hexa a entero.
+            </summary>
+            <param name="s">String con el hexa a convertir.</param>
+            <returns>Arreglo de Bytes obtenido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.Calc.IntToBin(System.Byte,System.Byte)">
+            <summary>
+            Convierte un entero a binario.
+            </summary>
+            <param name="b">Entero a convertir.</param>
+            <param name="size">Taanio del entero.</param>
+            <returns>String con los binarios.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.Calc.IntToHex(System.Byte[])">
+            <summary>
+            Convierte Entero a hexa.
+            </summary>
+            <param name="bytes">Btes a convertir.</param>
+            <returns>String con el hexa obtenido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.Calc.IntToHex(System.Byte)">
+            <summary>
+            Convierte entero a hexa.
+            </summary>
+            <param name="b">Byte a convertir.</param>
+            <returns>Hexa resultate.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.Calc.IntToHex(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Convierte entero a hexa.
+            </summary>
+            <param name="bytes">Bytes a convertir.</param>
+            <param name="index">Index del inicio del entero.</param>
+            <param name="count">Cantidad de enteros a convertir.</param>
+            <returns>String con el hexa obtenido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.Calc.IsHexDigit(System.Char)">
+            <summary>
+            Indica si es un digito Hexa.
+            </summary>
+            <param name="c">Caracter a revisar.</param>
+            <returns>Verdadero si es hexa.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.Calc.IsHexString(System.String)">
+            <summary>
+            Indica si es un string hexa.
+            </summary>
+            <param name="s">String a revisar.</param>
+            <returns>Verdadero si es hexa.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme">
+            <summary>
+            Clase encargada de manejar el esquema de codificacion.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Class016Bit">
+            <summary>
+            Bit 16 de la clase 0.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Class07Bit">
+            <summary>
+            Bit 7 de la clase 0.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Class08Bit">
+            <summary>
+            Bit 8 de la clase 0.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Class116Bit">
+            <summary>
+            Bit 16 de la clase 1.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Class17Bit">
+            <summary>
+            Bit 7 de la clase 1.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Class18Bit">
+            <summary>
+            Bit 8 de la clase 1.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Class216Bit">
+            <summary>
+            Bit 16 de la clase 2.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Class27Bit">
+            <summary>
+            Bit 7 de la clase 2.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Class28Bit">
+            <summary>
+            Bit 8 de la clase 2.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Class316Bit">
+            <summary>
+            Bit 16 de la clase 3.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Class37Bit">
+            <summary>
+            Bit 7 de la clase 3.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Class38Bit">
+            <summary>
+            Bit 8 de la clase 3.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.NoClass16Bit">
+            <summary>
+            NoClass_16Bit.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.NoClass7Bit">
+            <summary>
+            NoClass_7Bit.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.NoClass8Bit">
+            <summary>
+            NoClass_8Bit.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Bit0offset">
+            <summary>
+            Bit 0 del offset.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Bit1offset">
+            <summary>
+            Bit 1 del offset.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Bit2offset">
+            <summary>
+            Bit 2 del offset.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Bit3offset">
+            <summary>
+            Bit 3 del offset.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Bit4offset">
+            <summary>
+            Bit 4 del offset.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Bit5offset">
+            <summary>
+            Bit 5 del offset.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Bit6offset">
+            <summary>
+            Bit 6 del offset.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Bit7offset">
+            <summary>
+            Bit 7 del offset.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.codingGroup">
+            <summary>
+            Byte de codificacionde grupo.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.#ctor(System.Byte)">
+            <summary>
+            Cosntructor.
+            </summary>
+            <param name="dcs">Byte para inicializar el objeto.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Alphabets">
+            <summary>
+            Alpfabetos.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Alphabets.DefaultAlphabet">
+            <summary>
+            Por defecto.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Alphabets.EightBit">
+            <summary>
+            Ocho digitos.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Alphabets.Ucs2">
+            <summary>
+            Alfabeto Ucs2.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Alphabets.Reserved">
+            <summary>
+            Reservado.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.DataCoding">
+            <summary>
+            Codificacion de datos.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.DataCoding.Alpha7BitDefault">
+            <summary>
+            Por defecto de 7 digitos.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.DataCoding.Alpha8Bit">
+            <summary>
+            Ocho digitos.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.DataCoding.Class0">
+            <summary>
+            DataCoding Clase 0.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.DataCoding.Class1">
+            <summary>
+            DataCoding Clase 1.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.DataCoding.Class2">
+            <summary>
+            DataCoding Clase 2.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.DataCoding.Class3">
+            <summary>
+            DataCoding Clase 3.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.DataCoding.Group_DataCoding">
+            <summary>
+            Por grupos.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.GeneralCoding">
+            <summary>
+            Codificado general.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.GeneralCoding.Alpha16Bit">
+            <summary>
+            De 16 Bits.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.GeneralCoding.Alpha7BitDefault">
+            <summary>
+            Codificado De 7 bits.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.GeneralCoding.Alpha8Bit">
+            <summary>
+            Codificado de 8 bits.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.GeneralCoding.AlphaReserved">
+            <summary>
+            Codificacion reservada.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.GeneralCoding.Class0">
+            <summary>
+            Codificacion clase 0.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.GeneralCoding.Class1">
+            <summary>
+            Codificacion clase 1.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.GeneralCoding.Class2">
+            <summary>
+            Codificacion clase 2.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.GeneralCoding.Class3">
+            <summary>
+            Codificacion clase 3.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.GeneralCoding.Compressed">
+            <summary>
+            Codificacion comprimida.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.GeneralCoding.NoClass">
+            <summary>
+            Codificaciion Sin clase.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.GeneralCoding.Uncompressed">
+            <summary>
+            Codificaciond escomprimida.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.MessageCodings">
+            <summary>
+            Codigo de mensajes.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.MessageCodings.DefaultAlphabet">
+            <summary>
+            Mensajes por defecto.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.MessageCodings.EightBit">
+            <summary>
+            Mensajes en 8 bits.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.MessageWaiting">
+            <summary>
+            Espera de mensajes.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.MessageWaiting.EMailMsgWaiting">
+            <summary>
+            Espera de mail.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.MessageWaiting.FaxMsgWaiting">
+            <summary>
+            Espera de fax.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.MessageWaiting.Group_Discard_7BitDefault">
+            <summary>
+            Group_Discard_7BitDefault.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.MessageWaiting.Group_Store_16Bit">
+            <summary>
+            Group_Store_16Bit.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.MessageWaiting.Group_Store_7BitDefault">
+            <summary>
+            Group_Store_7BitDefault.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.MessageWaiting.OtherMsgWaiting">
+            <summary>
+            Otro mensaje esperando.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.MessageWaiting.SetIndicationActive">
+            <summary>
+            Indicacion activa.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.MessageWaiting.SetIndicationInactive">
+            <summary>
+            Indicacion inactiva.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.MessageWaiting.VoicemailMsgWaiting">
+            <summary>
+            Espera de mensaje de voz.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.CodingGroup">
+            <summary>
+            Grupo de codificacion.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.DataCodingScheme.Decode(System.Byte)">
+            <summary>
+            Decodifica un esquema de codificaciona partyr de un byte dcs.
+            </summary>
+            <param name="dcs">Byte con la informacion.</param>
+            <returns>Esquema de codificacion.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.GeneralDataCoding">
+            <summary>
+            Clase encargada de la decodificacion general.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.GeneralDataCoding.alphabet">
+            <summary>
+            Alfabeto a usar.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.GeneralDataCoding.classSpecified">
+            <summary>
+            Indica si se especifico la clase.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.GeneralDataCoding.compressed">
+            <summary>
+            Indica si la informacion esta comprimida.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.GeneralDataCoding.messageClass">
+            <summary>
+            Clase del mensaje.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.GeneralDataCoding.#ctor(System.Byte)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="dcs">Byte para inicializar el objeto.</param>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.GeneralDataCoding.Alphabet">
+            <summary>
+            Alfabeto a usar.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.GeneralDataCoding.ClassSpecified">
+            <summary>
+            Indica si la clase fue especificada.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.GeneralDataCoding.Compressed">
+            <summary>
+            Indica si la informacion esta comprimida.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.GeneralDataCoding.MessageClass">
+            <summary>
+            Clase del mensaje.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingMessageFlags">
+            <summary>
+            Banderas de los mensajes.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingMessageFlags.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingMessageFlags.MessageType">
+            <summary>
+            Tipo de mensaje.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingMessageFlags.op_Implicit(Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingMessageFlags)~System.Byte">
+            <summary>
+            Sobrecarga del operador byte..
+            </summary>
+            <param name="flags">Banderas a convertir a byte.</param>
+            <returns>Byte generado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingMessageFlags.ToByte">
+            <summary>
+            Convierte el objeto a byte.
+            </summary>
+            <returns>Byte generado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingMessageFlags.ToString">
+            <summary>
+            Convierte el objeto a un string.
+            </summary>
+            <returns>String generado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingMessageFlags.FromByte(System.Byte)">
+            <summary>
+            Inicializa el objeto a partir de un byte.
+            </summary>
+            <param name="b">Byte con la informacion.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingMessageType">
+            <summary>
+            Clase encargada de manejar los tipos de mensajes entrantes.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingMessageType.SmsDeliver">
+            <summary>
+            Envio de Sms.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingMessageType.SmsStatusReport">
+            <summary>
+            Reporte de estatus.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingMessageType.SmsSubmitReport">
+            <summary>
+            Envio de reporte.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingSmsPdu">
+            <summary>
+            Clase encargada de manejar los sms en pdu.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingSmsPdu.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingSmsPdu.MessageType">
+            <summary>
+            Tipo de mensaje.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingSmsPdu.MyMessageFlags">
+            <summary>
+            Banderas de mensaje.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingSmsPdu.Decode(System.String,System.Boolean)">
+            <summary>
+            Inicializa un onjeto a partir de un pdu.
+            </summary>
+            <param name="pdu">PDU con la informacion.</param>
+            <param name="includesSmscData">Indica si se debe incluir informacion de smsc.</param>
+            <returns>IncomingSMspdu generado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingSmsPdu.Decode(System.String,System.Boolean,System.Int32)">
+            <summary>
+            Inicializa un onjeto a partir de un pdu.
+            </summary>
+            <param name="pdu">PDU con la informacion.</param>
+            <param name="includesSmscData">Indica si se debe incluir informacion de smsc.</param>
+            <param name="actualLength">Longitud actual del pdu.</param>
+            <returns>IncomingSMspdu generado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.IncomingSmsPdu.GetMessageType(System.Byte)">
+            <summary>
+            Retorna el tipo de mensaje.
+            </summary>
+            <param name="flags">Banderas para determinar el tipo.</param>
+            <returns>Tipo de mensaje.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ITimestamp">
+            <summary>
+            Interfaz para manejar estampas de tiempo.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ITimestamp.GetTimestamp">
+            <summary>
+            Retorna la estampa de tiempo de un sms.
+            </summary>
+            <returns>Estampa de tiempo.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus">
+            <summary>
+            Enumeracion para manejo de mensajes conocidos.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Ntemp_Congestion">
+            <summary>
+            Ntemp_Congestion.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Ntemp_ErrorInSme">
+            <summary>
+            Ntemp_ErrorInSme.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Ntemp_NoResponseFromSme">
+            <summary>
+            Ntemp_NoResponseFromSme.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Ntemp_QosNotAvailable">
+            <summary>
+            Ntemp_QosNotAvailable.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Ntemp_ServiceRejected">
+            <summary>
+            Ntemp_ServiceRejected.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Ntemp_SmeBusy">
+            <summary>
+            Ntemp_SmeBusy.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.OK_NotConfirmed">
+            <summary>
+            OK_NotConfirmed.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.OK_Received">
+            <summary>
+            OK_Received.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.OK_Replaced">
+            <summary>
+            OK_Replaced.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Perm_ConnectionRejectedBySme">
+            <summary>
+            Perm_ConnectionRejectedBySme.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Perm_IncompatibleDestination">
+            <summary>
+            Perm_IncompatibleDestination.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Perm_NoInterworkingAvailable">
+            <summary>
+            Perm_NoInterworkingAvailable.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Perm_NotObtainable">
+            <summary>
+            Perm_NotObtainable.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Perm_QosNotAvailable">
+            <summary>
+            Perm_QosNotAvailable.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Perm_RemoteProcedureError">
+            <summary>
+            Perm_RemoteProcedureError.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Perm_SMDeletedByOriginatingSme">
+            <summary>
+            Perm_SMDeletedByOriginatingSme.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Perm_SMDeletedBySCAdministration">
+            <summary>
+            Perm_SMDeletedBySCAdministration.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Perm_SMDoesNotExist">
+            <summary>
+            Perm_SMDoesNotExist.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Perm_SMValidityPeriodExpired">
+            <summary>
+            Perm_SMValidityPeriodExpired.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Temp_Congestion">
+            <summary>
+            Temp_Congestion.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Temp_ErrorInSme">
+            <summary>
+            Temp_ErrorInSme.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Temp_NoResponseFromSme">
+            <summary>
+            Temp_NoResponseFromSme.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Temp_QosNotAvailable">
+            <summary>
+            Temp_QosNotAvailable.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Temp_ServiceRejected">
+            <summary>
+            Temp_ServiceRejected.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus.Temp_SmeBusy">
+            <summary>
+            Temp_SmeBusy.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageCoding">
+            <summary>
+            Clase encargada de codificacion de mensajes.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageCoding.bit3">
+            <summary>
+            Indica si es bit3.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageCoding.dataCoding">
+            <summary>
+            Codificaciond e datos.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageCoding.messageClass">
+            <summary>
+            Calse de mensaje.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageCoding.#ctor(System.Byte)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="dcs">Byte con la informacion para inicializar el objeto.</param>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageCoding.ActualDataCoding">
+            <summary>
+            Codificacion del mensaje.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageCoding.MessageClass">
+            <summary>
+            Clase del mensaje.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageStatus">
+            <summary>
+            Clase encargada de manejar estado de los mensajes.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageStatus.status">
+            <summary>
+            Estatus del mensaje.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageStatus.#ctor(System.Byte)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="status">Byte para inicializar el objeto.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageStatus.#ctor(Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="status">Estado de mensaje conocido.</param>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageStatus.Category">
+            <summary>
+            Categoria del estatus.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageStatus.op_Implicit(Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageStatus)~System.Byte">
+            <summary>
+            Covierte el objeto en un byte.
+            </summary>
+            <param name="s">Estatus del mensaje.</param>
+            <returns>Byte resultante.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageStatus.op_Implicit(System.Byte)~Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageStatus">
+            <summary>
+            Conveirte el byte en un MessageStatus.
+            </summary>
+            <param name="b">Byte con la informacion.</param>
+            <returns>MessageStatus obtenido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageStatus.op_Implicit(Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.KnownMessageStatus)~Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageStatus">
+            <summary>
+            Convierte un mensaje conocido en un MessageStatus.
+            </summary>
+            <param name="s">Mensaje de estatus conocido.</param>
+            <returns>MessageStatus obtenido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageStatus.IsKnownStatus">
+            <summary>
+            Indica si es un estatus conocido.
+            </summary>
+            <returns>Verdadero si el estatus es conocido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageStatus.GetKnownStatus">
+            <summary>
+            Retorna un estatus conocido.
+            </summary>
+            <returns>Estatus conocido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageStatus.ToString">
+            <summary>
+            Convierte el objeto en un string.
+            </summary>
+            <returns>String del objeto.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageStatus.ToByte">
+            <summary>
+            Convierte el objeto en un byte.
+            </summary>
+            <returns>Byte del objeto.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageWaitingDiscard">
+            <summary>
+            Clase encargada de descartar mensajes de espera.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageWaitingDiscard.#ctor(System.Byte)">
+            <summary>
+            Cosntructor.
+            </summary>
+            <param name="dcs">Byte para inicializar el objeto.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageWaitingIndication">
+            <summary>
+            Clase encargada de manejo de indicaciones de espera de mensajes.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageWaitingIndication.bit2">
+            <summary>
+            Indica si el bit 2 esta habilitado.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageWaitingIndication.indicationActive">
+            <summary>
+            Indica si la indicacion esta activa.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageWaitingIndication.indicationType">
+            <summary>
+            Tipo de indicacion.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageWaitingIndication.#ctor(System.Byte)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="dcs">Byte para inicializar el objeto.</param>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageWaitingIndication.IndicationActive">
+            <summary>
+            Indica si la indicacion esta activa.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageWaitingIndication.IndicationType">
+            <summary>
+            Tipo de indicacion.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageWaitingStore">
+            <summary>
+            Tienda de mensajes de espera.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageWaitingStore.#ctor(System.Byte)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="dcs">Byte para inicializar el objeto.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageWaitingStoreUcs2">
+            <summary>
+            Clase para manejo de espera de mensajes.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.MessageWaitingStoreUcs2.#ctor(System.Byte)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="dcs">Byte para inicializar el objeto.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingMessageFlags">
+            <summary>
+            Clase encargada de banderas para mensajes de salida.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingMessageFlags.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingMessageFlags.MessageType">
+            <summary>
+            Tipo del mensaje.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingMessageFlags.op_Implicit(Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingMessageFlags)~System.Byte">
+            <summary>
+            Convierte el objeto a un byte.
+            </summary>
+            <param name="flags">Banderas a convertir.</param>
+            <returns>Byte resultado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingMessageFlags.ToByte">
+            <summary>
+            Convierte el objeto a un byte.
+            </summary>
+            <returns>Byte obtenido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingMessageFlags.ToString">
+            <summary>
+            Convierte el objeto a un string.
+            </summary>
+            <returns>String obtenido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingMessageFlags.FromByte(System.Byte)">
+            <summary>
+            Inicializa el objeto a partir de un byte.
+            </summary>
+            <param name="b">Byte con la informacione necesaria.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingMessageType">
+            <summary>
+            Enumeracion para indicar el tipo de mensaje de salida.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingMessageType.SmsSubmit">
+            <summary>
+            Mensaje de envio.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingMessageType.SmsCommand">
+            <summary>
+            Mensaje de comando.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingMessageType.SmsDeliverReport">
+            <summary>
+            Mensaje de reporte.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingSmsPdu">
+            <summary>
+            Clase encargada de sms de salida.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingSmsPdu.messageReference">
+            <summary>
+            Mensaje de referencia.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingSmsPdu.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingSmsPdu.MessageReference">
+            <summary>
+            Mensaje de referencia.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingSmsPdu.MessageType">
+            <summary>
+            Tipo de mensaje.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingSmsPdu.MyMessageFlags">
+            <summary>
+            Banderas de los mensajes.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingSmsPdu.Decode(System.String,System.Boolean)">
+            <summary>
+            Decodifica un pdu a un sms de salida.
+            </summary>
+            <param name="pdu">Pdu con la informacion necesaria.</param>
+            <param name="includesSmscData">Indica si se debe incluir la informacion del smsc.</param>
+            <returns>OutgoingSmsPdu generado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingSmsPdu.Decode(System.String,System.Boolean,System.Int32)">
+            <summary>
+            Decodifica un pdu a un sms de salida.
+            </summary>
+            <param name="pdu">Pdu con la informacion necesaria.</param>
+            <param name="includesSmscData">Indica si se debe incluir la informacion del smsc.</param>
+            <param name="actualLength">Longitud actual.</param>
+            <returns>OutgoingSmsPdu obtenido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.OutgoingSmsPdu.GetMessageType(System.Byte)">
+            <summary>
+            Retorna el tipo del objeto.
+            </summary>
+            <param name="flags">Banderas para inicializar el objeto.</param>
+            <returns>Tipo de mensaje.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ParameterIndicator">
+            <summary>
+            Clase encargada de indicar los parametros.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ParameterIndicator.#ctor(System.Byte)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="value">Byte con la informacion para inicializar el objeto.</param>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ParameterIndicator.Extension">
+            <summary>
+            Indica si tiene extension.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ParameterIndicator.Reserved_Bit3">
+            <summary>
+            Indica si el bit 3 es reervado.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ParameterIndicator.Reserved_Bit4">
+            <summary>
+            Indica si el bit 4 es reervado.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ParameterIndicator.Reserved_Bit5">
+            <summary>
+            Indica si el bit 5 es reervado.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ParameterIndicator.Reserved_Bit6">
+            <summary>
+            Indica si el bit 6 es reervado.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ParameterIndicator.TP_DCS">
+            <summary>
+            Indica TP_DCS.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ParameterIndicator.TP_PID">
+            <summary>
+            Indica TP_PID.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ParameterIndicator.TP_UDL">
+            <summary>
+            Indica TP_UDL.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ParameterIndicator.op_Implicit(Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ParameterIndicator)~System.Byte">
+            <summary>
+            Sobrecarga del operador Byte.
+            </summary>
+            <param name="pi">Objeto que se desea pasar a un indicador de parametros.</param>
+            <returns>Byte a partir del objeto.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ParameterIndicator.op_Implicit(System.Byte)~Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ParameterIndicator">
+            <summary>
+            Sobrecarga del operador ParameterIndicator.
+            </summary>
+            <param name="b">Byte con la informacion para inicializar el objeto.</param>
+            <returns>ParameterIndicator obtenido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ParameterIndicator.ToByte">
+            <summary>
+            Convierte el objeto a byte.
+            </summary>
+            <returns>Byte obtenido.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.RelativeValidityPeriod">
+            <summary>
+            Periodo de validez relativo.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.RelativeValidityPeriod.value">
+            <summary>
+            Valor del periodo.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.RelativeValidityPeriod.#ctor(System.Byte)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="value">Byte con la informacion para inicializar el objeto.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.RelativeValidityPeriod.#ctor(System.TimeSpan)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="period">Estampa de tiempo para la construccion del objeto.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.RelativeValidityPeriod.op_Explicit(System.TimeSpan)~Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.RelativeValidityPeriod">
+            <summary>
+            Sobrecarga del operador RelativeValidityPeriod.
+            </summary>
+            <param name="ts">Timespan para inicializar el objeto.</param>
+            <returns>Objeto construido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.RelativeValidityPeriod.op_Implicit(Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.RelativeValidityPeriod)~System.Byte">
+            <summary>
+            Sobrecarga al operador Byte.
+            </summary>
+            <param name="v">Periodo relativo a convertir.</param>
+            <returns>Byte del periodo relativo.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.RelativeValidityPeriod.op_Implicit(Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.RelativeValidityPeriod)~System.TimeSpan">
+            <summary>
+            Sobrecarga al operador timespan.
+            </summary>
+            <param name="v">Periodo relativo a convertir.</param>
+            <returns>Timespan obtenido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.RelativeValidityPeriod.op_Implicit(System.Byte)~Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.RelativeValidityPeriod">
+            <summary>
+            Sobrecarga al operador RelativeValidityPeriod.
+            </summary>
+            <param name="b">Byte c a converitr.</param>
+            <returns>RelativeValidityPeriod obtenido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.RelativeValidityPeriod.ToByte">
+            <summary>
+            Convierte el objeto a un byte.
+            </summary>
+            <returns>Byte obtenido del objeto.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.RelativeValidityPeriod.ToString">
+            <summary>
+            Convierte el objeto a un string.
+            </summary>
+            <returns>String obtenido del objeto.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.RelativeValidityPeriod.ToTimeSpan">
+            <summary>
+            Conveirte el objeto a una estampa de tiempo.
+            </summary>
+            <returns>Estampa de tiempo obtenida.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.RelativeValidityPeriod.ToTimeSpan(System.Byte)">
+            <summary>
+            Convierte el objeto a una estampa de tiempo.
+            </summary>
+            <param name="value">Valor a convertir.</param>
+            <returns>Estampa de tiempo obtenida.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.RelativeValidityPeriod.AppendIfNonzero(System.Text.StringBuilder,System.Int32,System.String)">
+            <summary>
+            Agrega un sufijo si no es cero.
+            </summary>
+            <param name="str">String a comparar.</param>
+            <param name="val">Valor a comparar.</param>
+            <param name="suffix">Sufijo que se debe agregar.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ReservedCodingGroup">
+            <summary>
+            Clase encargada de codificacion reservada.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ReservedCodingGroup.dcs">
+            <summary>
+            Byte de DCS.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ReservedCodingGroup.#ctor(System.Byte)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="dcs">Byte con informacion para inicializar el objeto.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverMessageFlags">
+            <summary>
+            Clas eencargada de las banderas de los mensajes en el envio de sms.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverMessageFlags.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverMessageFlags.#ctor(System.Byte)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="flags">Bytes para inicializar el objeto.</param>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverMessageFlags.MessageType">
+            <summary>
+            Tipo de mensaje.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverMessageFlags.MoreMessages">
+            <summary>
+            Indica si existen mas mensajes.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverMessageFlags.ReplyPathExists">
+            <summary>
+            Indica si se debe responder la existencia de la ruta.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverMessageFlags.StatusReportRequested">
+            <summary>
+            Indica si se requiere un reporte de estado.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverMessageFlags.UserDataHeaderPresent">
+            <summary>
+            Indica si existe la cabecera del usuario.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverMessageFlags.ToByte">
+            <summary>
+            Convierte el objete a un byte.
+            </summary>
+            <returns>Byte resultante del objeto.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverMessageFlags.FromByte(System.Byte)">
+            <summary>
+            Inicializa el objeto a partir d eun byte.
+            </summary>
+            <param name="b">Byte con los datos para inicializar el objeto.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverPdu">
+            <summary>
+            Clase encargada de Envio de sms.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverPdu.originatingAddress">
+            <summary>
+            Direccion que origina el envio.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverPdu.originatingAddressType">
+            <summary>
+            Tipo de direccion.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverPdu.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverPdu.#ctor(System.String,System.Boolean,System.Int32)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="pdu">PDU con la informacion.</param>
+            <param name="includesSmscData">Informa si se debe incluir informacion de smsc.</param>
+            <param name="actualLength">Longitud actual.</param>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverPdu.MessageFlags">
+            <summary>
+            Banderas de mensajes.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverPdu.MoreMessages">
+            <summary>
+            Indica si hay mas mensajes.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverPdu.OriginatingAddress">
+            <summary>
+            Direccion de origen.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverPdu.OriginatingAddressType">
+            <summary>
+            Tipo de direccion.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverPdu.ReplyPathExists">
+            <summary>
+            Indica si se responde la existencia de la ruta.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverPdu.SCTimestamp">
+            <summary>
+            Estampa de tiempo SCT.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverPdu.StatusReportRequested">
+            <summary>
+            Indica si se requiere reporte de estatus.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverPdu.UserDataHeaderPresent">
+            <summary>
+            Indica si la cabecera esta presente.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverPdu.GetTimestamp">
+            <summary>
+            Retorna la estampa de tiempo.
+            </summary>
+            <returns>Estampa de tiempo.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsDeliverPdu.ToString(System.Boolean)">
+            <summary>
+            Convierte el objeto a un string.
+            </summary>
+            <param name="excludeSmscData">Indica si se debe expluir la informacion de smsc.</param>
+            <returns>String del ojeto.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu">
+            <summary>
+            Clase encargada de manejar SMS de PDU.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.MaxTextLength">
+            <summary>
+            Maxima longitud del texto.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.MaxUnicodeTextLength">
+            <summary>
+            Maxima longitud de texto Unicode.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.smscAddress">
+            <summary>
+            Direccion smsc.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.smscTOA">
+            <summary>
+            TOA de smsc.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.userData">
+            <summary>
+            Datos del usuario.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.userDataLength">
+            <summary>
+            Longitud de los datos del usuario.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.#ctor">
+            <summary>
+            Cosntructor.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.ActualLength">
+            <summary>
+            Longitud actual.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.DataCodingScheme">
+            <summary>
+            Esquema de codificacion.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.ProtocolID">
+            <summary>
+            Id del protocolo.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.SmscAddress">
+            <summary>
+            Direccion Smsc.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.SmscAddressType">
+            <summary>
+            Tipo de direccion de smsc.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.TotalLength">
+            <summary>
+            Longitud total.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.UserData">
+            <summary>
+            Informacion del usuario.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.UserDataLength">
+            <summary>
+            Longitud de la informacion del usuario.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.UserDataText">
+            <summary>
+            Texto de la informacion del usuario.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.GetSafeText(System.String)">
+            <summary>
+            Obtiene el texto seguro.
+            </summary>
+            <param name="data">Datos con el texto.</param>
+            <returns>Texto seguro encotrado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.GetSafeText(System.String,System.Boolean@,System.Boolean@)">
+            <summary>
+            Obtiene texto seguro.
+            </summary>
+            <param name="data">Datos donde se enceuntra el texto.</param>
+            <param name="lengthCorrected">Longitud corregida del texto.</param>
+            <param name="charsCorrected">Indica si se corrigieron caracteres.</param>
+            <returns>Texto seguro encontrado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.GetTextLength(System.String)">
+            <summary>
+            Retorna la longitud del texto.
+            </summary>
+            <param name="text">Texto del cual se desea la longitud.</param>
+            <returns>Longitud encontrada.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.GetSmscAddress(System.String@,System.Byte@)">
+            <summary>
+            Retorna la direccion smsc.
+            </summary>
+            <param name="address">Direccion.</param>
+            <param name="addressType">Tipo de Direccion.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.SetSmscAddress(System.String,System.Byte)">
+            <summary>
+            Establece la direccion Smsc.
+            </summary>
+            <param name="address">Direccion.</param>
+            <param name="addressType">Tipo de direccion.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.SetUserData(System.Byte[],System.Byte)">
+            <summary>
+            Establece la informacion del usuario.
+            </summary>
+            <param name="data">Informacion del usuario.</param>
+            <param name="dataLength">Longitud de la informacion.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.ToString">
+            <summary>
+            Convierte el objeto a string.
+            </summary>
+            <returns>String del objeto.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.ToString(System.Boolean)">
+            <summary>
+            Convierte el objeto a string.
+            </summary>
+            <param name="excludeSmscData">Indica si se debe incluir la onfirmacion del smsc.</param>
+            <returns>String del objeto.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.GetTimestamp">
+            <summary>
+            Retorna la estampa de tiempo.
+            </summary>
+            <returns>Estampa de tiempo.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.DecodeGeneralAddress(System.String,System.Int32@,System.String@,System.Byte@)">
+            <summary>
+            Decodifica una direccion general.
+            </summary>
+            <param name="pdu">PDU con la direccion.</param>
+            <param name="index">Index de la direccion.</param>
+            <param name="address">Direccion.</param>
+            <param name="addressType">Tipo de la direccion.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.DecodeSmscAddress(System.String,System.Int32@,System.String@,System.Byte@)">
+            <summary>
+            Decodifica una direccion Smsc.
+            </summary>
+            <param name="pdu">PDU con la direccion.</param>
+            <param name="index">Index de la direccion.</param>
+            <param name="address">Direccion.</param>
+            <param name="addressType">Tipo de direccion.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.DecodeUserData(System.String,System.Int32@,System.Byte@,System.Byte[]@)">
+            <summary>
+            Decodigica los datos del usuario.
+            </summary>
+            <param name="pdu">PDU con los datos.</param>
+            <param name="index">Index de los datos.</param>
+            <param name="userDataLength">Longitud de los datos.</param>
+            <param name="userData">Byte de salida con parametros de usuario.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.CreateAddressOfType(System.String,System.Byte)">
+            <summary>
+            Crea una direccion del tipo indicado.
+            </summary>
+            <param name="address">Direccion.</param>
+            <param name="type">Tipo de la direccion.</param>
+            <returns>Direccion Creada.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.Decode7BitText">
+            <summary>
+            Decodifica texto en 7 bit.
+            </summary>
+            <returns>Retorna el string del texto decodificado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.DecodeUcs2Text">
+            <summary>
+            Decodifica texto en Ucs2.
+            </summary>
+            <returns>Texto decodificado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.Encode7BitText(System.String)">
+            <summary>
+            Codifica texto en 7 bits.
+            </summary>
+            <param name="text">Texto codificado.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.EncodeUcs2Text(System.String)">
+            <summary>
+            Codifica texto en Ucs2.
+            </summary>
+            <param name="text">Texto codificado.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsPdu.FindTypeOfAddress(System.String,System.Byte@,System.String@)">
+            <summary>
+            Busca el tipo de direccion.
+            </summary>
+            <param name="address">Direccion.</param>
+            <param name="type">Tipo de direccion.</param>
+            <param name="useThisAddress">Parametro de salida con la direccion.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportMessageFlags">
+            <summary>
+            Clase encargada del manejo de las banderas para el estado de los sms.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportMessageFlags.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportMessageFlags.#ctor(System.Byte)">
+            <summary>
+            Cosntructor.
+            </summary>
+            <param name="flags">Banderas para inicializacion del objeto.</param>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportMessageFlags.MessageType">
+            <summary>
+            Tipo demensaje.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportMessageFlags.MoreMessages">
+            <summary>
+            Indica si existen mas mensajes.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportMessageFlags.Qualifier">
+            <summary>
+            Indica si existe calificador.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportMessageFlags.UserDataHeaderPresent">
+            <summary>
+            Indica si existe o no la cabecera.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportMessageFlags.ToByte">
+            <summary>
+            Convierte el objeto a un byte.
+            </summary>
+            <returns>Byte del objeto.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportMessageFlags.FromByte(System.Byte)">
+            <summary>
+            Inicializa las variables del objeto a partir de un byte.
+            </summary>
+            <param name="b">Byte para inicializar las banderas.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu">
+            <summary>
+            Reporte de estado de SMS.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.recipientAddress">
+            <summary>
+            Direccion del recipiente.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.recipientAddressType">
+            <summary>
+            Tipo de direccion.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.#ctor(System.String,System.Boolean,System.Int32)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="pdu">PDU para inicializar el reporte.</param>
+            <param name="includesSmscData">Indica si se debe incluir los datos del smsc.</param>
+            <param name="actualLength">Longitud actual del pdu.</param>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.DischargeTime">
+            <summary>
+            Retorna la estampa de tiempo de la descarga.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.MessageFlags">
+            <summary>
+            Banderas de mensaje.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.MessageReference">
+            <summary>
+            Mensaje de referencia.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.MoreMessages">
+            <summary>
+            Indica si hay mas mensajes.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.ParameterIndicator">
+            <summary>
+            Indicador de parametros.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.Qualifier">
+            <summary>
+            Indica si existe un calificador.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.RecipientAddress">
+            <summary>
+            Direccion del recipiente.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.RecipientAddressType">
+            <summary>
+            Tipo de direccion.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.SCTimestamp">
+            <summary>
+            Estampa de tiempo de SCT.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.Status">
+            <summary>
+            Status de el mensajes.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.UserDataHeaderPresent">
+            <summary>
+            Indica si el header esta presente.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.GetTimestamp">
+            <summary>
+            Retorn la estampa de tiempo del estado.
+            </summary>
+            <returns>Estampa de tiempo.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.SetRecipientAddress(System.String,System.Byte)">
+            <summary>
+            Establece la direccion del recipiente.
+            </summary>
+            <param name="address">Direccion.</param>
+            <param name="addressType">Tipo de direccion.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsStatusReportPdu.ToString(System.Boolean)">
+            <summary>
+            Conveirte el objeto en un string.
+            </summary>
+            <param name="excludeSmscData">Indica si se debe expluir la informacion del smsc.</param>
+            <returns>String del objeto.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitMessageFlags">
+            <summary>
+            Clase encargada de las banderas para el envio de sms.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitMessageFlags.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitMessageFlags.#ctor(System.Byte)">
+            <summary>
+            Cosntructor.
+            </summary>
+            <param name="flags">Banderas para inicializar el objeto.</param>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitMessageFlags.MessageType">
+            <summary>
+            Tipo de mensaje.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitMessageFlags.RejectDuplicates">
+            <summary>
+            Indica si debe o no rechazar duplicados.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitMessageFlags.ReplyPathExists">
+            <summary>
+            Indica si debe responder o no si la ruta existe.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitMessageFlags.RequestStatusReport">
+            <summary>
+            Indica si se debe solicitar el reporte de estado.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitMessageFlags.UserDataHeaderPresent">
+            <summary>
+            Indica si el header esta presente.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitMessageFlags.ValidityPeriodFormat">
+            <summary>
+            Indica el formato del periodo.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitMessageFlags.ToByte">
+            <summary>
+            Convierte el objeto a byte.
+            </summary>
+            <returns>Objeto convertido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitMessageFlags.ToString">
+            <summary>
+            Convierte el objeto a string.
+            </summary>
+            <returns>String del objeto.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitMessageFlags.FromByte(System.Byte)">
+            <summary>
+            Arma el objeto a partyr de un byte.
+            </summary>
+            <param name="b">Byte para armar el objeto.</param>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu">
+            <summary>
+            Clase encargada de envio de PDU.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.destAddress">
+            <summary>
+            Direccion de destino.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.destTOA">
+            <summary>
+            Destino TOA.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.validityPeriod">
+            <summary>
+            Periodod e validacion.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.#ctor(System.String,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="userDataText">Texto a enviar.</param>
+            <param name="destinationAddress">Direccion de destino.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.#ctor(System.String,System.Boolean,System.Int32)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="pdu">Pdu a enviar.</param>
+            <param name="includesSmscData">Se debe incluir o no l ainformacion de Smsc.</param>
+            <param name="actualLength">Longitud Actual.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.#ctor(System.String,System.String,System.Byte)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="userDataText">Texto a enviar.</param>
+            <param name="destinationAddress">Direccion de destino.</param>
+            <param name="dataCodingScheme">Schema para codificar.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="userDataText">Texto a enviar.</param>
+            <param name="destinationAddress">Direcciond e destino.</param>
+            <param name="smscAddress">Direccion Smsc.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.#ctor(System.String,System.String,System.String,System.Byte)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="userDataText">Texto a enviar.</param>
+            <param name="destinationAddress">Direccion de destino.</param>
+            <param name="smscAddress">Direccion Smsc.</param>
+            <param name="dataCodingScheme">Esquema para codificar.</param>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.DestinationAddress">
+            <summary>
+            Direccion de destino.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.DestinationAddressType">
+            <summary>
+            Tipo de la direccion de destino.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.MessageFlags">
+            <summary>
+            Banderas del mensaje.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.RejectDuplicates">
+            <summary>
+            Acepta o no duplicados.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.ReplyPathExists">
+            <summary>
+            Indica si existe o no el path.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.RequestStatusReport">
+            <summary>
+            Indica si se debe requerir reporte de estado.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.UserDataHeaderPresent">
+            <summary>
+            Indica si la cabecera de los datos esta presente.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.ValidityPeriod">
+            <summary>
+            Periodo de validacion.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.GetTimestamp">
+            <summary>
+            Retorna el timestamp del mensaje.
+            </summary>
+            <returns>Timestamp del mensaje.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.SetDestinationAddress(System.String,System.Byte)">
+            <summary>
+            Establece la direccion de destino.
+            </summary>
+            <param name="address">Direccion de destino.</param>
+            <param name="addressType">Tipo de direccion.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.ToString(System.Boolean)">
+            <summary>
+            Convierte el objeto a un string.
+            </summary>
+            <param name="excludeSmscData">Incluye o no informacion del smsc.</param>
+            <returns>String del objeto.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.EncodeDestinationAddress(System.String,System.Byte)">
+            <summary>
+            Metodo que codifica la direccion de destino.
+            </summary>
+            <param name="address">Direccion de destino.</param>
+            <param name="addressType">Tipo de direccion.</param>
+            <returns>Direccion de destino codificada.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsSubmitPdu.EncodeSmscAddress(System.String,System.Byte)">
+            <summary>
+            Metodo que codifica la direccion smsc.
+            </summary>
+            <param name="address">Direccion de destino.</param>
+            <param name="addressType">Tipo de direccion.</param>
+            <returns>Direccion codificada.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp">
+            <summary>
+            Estampa de tiempo para mensajes SMS.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.none">
+            <summary>
+            Estampa de timepo de referencia.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.year">
+            <summary>
+            Anio de la estampa de tiempo.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.month">
+            <summary>
+            Mes de la estampa de tiempo.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.day">
+            <summary>
+            Dia de la estampa de tiempo.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.hour">
+            <summary>
+            Hora de la estampa de tiempo.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.minute">
+            <summary>
+            Minutos de la estampa de tiempo.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.second">
+            <summary>
+            Segundos de la estampa de tiempo.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.timeZoneOffset">
+            <summary>
+            Offset de la zona de tiempo.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.#cctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.#ctor(System.String,System.Int32@)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="pdu">Pdu de la estampa.</param>
+            <param name="index">Index donde se encuentra la estampa.</param>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.#ctor(System.DateTime,System.Int32)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="timestamp">Estampa de tiempo.</param>
+            <param name="timeZoneOffset">Offset de la zona de tiempo.</param>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.None">
+            <summary>
+            Estampa de tiempo de referencia.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.Year">
+            <summary>
+            Anio de la estampa de tiempo.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.Month">
+            <summary>
+            Mes de la estampa de tiempo.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.Day">
+            <summary>
+            Dia de la estmapa de tiempo.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.Hour">
+            <summary>
+            Hora de la estampa de tiempo.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.Minute">
+            <summary>
+            Minutos de la estampa de tiempo.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.Second">
+            <summary>
+            Segundos de la estampa de timepo.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.TimeZoneOffset">
+            <summary>
+            Offset de la zona de tiempo.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.TimeZoneOffsetString">
+            <summary>
+            String del offset.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.TimeZoneOffsetSpan">
+            <summary>
+            Span de la zona de tiempo.
+            </summary>
+        </member>
+        <member name="P:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.TimeZoneOffsetSortableString">
+            <summary>
+            String Ordenado del offset.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.ToString">
+            <summary>
+            Pasa el objeto a un string.
+            </summary>
+            <returns>String del objeto.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.ToString(System.Boolean)">
+            <summary>
+            Pasa el objeto a un string.
+            </summary>
+            <param name="includeTimeZoneOffset">Se debe o no incluir la zona de timepo.</param>
+            <returns>String generado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.ToSortableString">
+            <summary>
+            Pasa el objeto a un string ordenado.
+            </summary>
+            <returns>String generado.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.ToDateTime">
+            <summary>
+            Pasa el objeto a un DateTime.
+            </summary>
+            <returns>Fecha convertida.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.SmsTimestamp.CompareTo(System.Object)">
+            <summary>
+            Compara el objeto con otro.
+            </summary>
+            <param name="value">Valor contra el que se debe comparar.</param>
+            <returns>Int indicando el resultado de la comparacion.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.StatusCategory">
+            <summary>
+            Ennumeracion encargada de manejar status de categoria.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.StatusCategory.Success">
+            <summary>
+            Estado Exitoso.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.StatusCategory.TemporaryErrorWithRetry">
+            <summary>
+            Error temporal con reintento.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.StatusCategory.PermanentError">
+            <summary>
+            Error  permanente.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.StatusCategory.TemporaryErrorNoRetry">
+            <summary>
+            Error temporal sin reintento.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.StatusCategory.Reserved">
+            <summary>
+            Estado Reservado.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.TextDataConverter">
+            <summary>
+            Clase encargada de convertir Texto en datos.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.TextDataConverter.sevenBitDefault">
+            <summary>
+            Lista por defecto de 7 bits.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.TextDataConverter.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.TextDataConverter.OctetsToSeptetsStr(System.Byte[])">
+            <summary>
+            Pasa de Octetos A Septetos.
+            </summary>
+            <param name="data">Datos a convertir.</param>
+            <returns>Septetos obtenidos.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.TextDataConverter.SeptetsToOctetsHex(System.String)">
+            <summary>
+            Cambia de Septetos a Octetos en Hexa.
+            </summary>
+            <param name="data">Datos a convertir.</param>
+            <returns>Datos obtenidos.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.TextDataConverter.SeptetsToOctetsInt(System.String)">
+            <summary>
+            Pasa de Septetos a Octetos enteros.
+            </summary>
+            <param name="data">Datos que se desean cambiar.</param>
+            <returns>Arreglo obtenido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.TextDataConverter.SevenBitToString(System.String)">
+            <summary>
+            Convierte un string de 7 bits a una cadena.
+            </summary>
+            <param name="s">Cadena de 7 bits.</param>
+            <returns>Cadena obtenida.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.TextDataConverter.SevenBitToString(System.String,System.Boolean)">
+            <summary>
+            Convierte un arreglo de 7 bits a un string.
+            </summary>
+            <param name="s">Cadena de 7 bitas que se desea convertir.</param>
+            <param name="throwExceptions">Indica si debe o no enviar excepciones.</param>
+            <returns>String obtenido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.TextDataConverter.StringTo7Bit(System.String)">
+            <summary>
+            Convierte un string a 7 bits.
+            </summary>
+            <param name="s">String a convertir.</param>
+            <returns>String obtenido.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.TextDataConverter.StringTo7Bit(System.String,System.Boolean,System.Boolean@)">
+            <summary>
+            Convierte un texto a 7 bits.
+            </summary>
+            <param name="s">Texto a convertir.</param>
+            <param name="throwExceptions">Indica si se deben o no levantar excepciones.</param>
+            <param name="charsReplaced">Indica si se reemplazaron caracteres.</param>
+            <returns>Cadena obtenida.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.TextDataConverter.SevenBitExtensionToChar(System.Byte)">
+            <summary>
+            Extiende 7 bits a un char.
+            </summary>
+            <param name="b">Byte a transformar.</param>
+            <returns>Char a partir del byte.</returns>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.TextDataConverter.CharToSevenBitExtension(System.Char)">
+            <summary>
+            Convierte un char a una extension de 7 bits.
+            </summary>
+            <param name="c">Char a convertir.</param>
+            <returns>Byte obtenido.</returns>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ValidityPeriod">
+            <summary>
+            Clase que maneja el periodo valido.
+            </summary>
+        </member>
+        <member name="M:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ValidityPeriod.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="T:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ValidityPeriodFormat">
+            <summary>
+            Formato del periodo de validacion.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ValidityPeriodFormat.Unspecified">
+            <summary>
+            No especificado.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ValidityPeriodFormat.Relative">
+            <summary>
+            Validad Relativa.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ValidityPeriodFormat.Absolute">
+            <summary>
+            Validad Absoluta.
+            </summary>
+        </member>
+        <member name="F:Primestone.PrimeRead.Infrastructure.CrossCutting.Notifications.SMS.Modem.PDU.ValidityPeriodFormat.Enhanced">
+            <summary>
+            Validad Extendida.
+            </summary>
+        </member>
+    </members>
+</doc>

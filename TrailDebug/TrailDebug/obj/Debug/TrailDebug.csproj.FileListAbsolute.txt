@@ -1,0 +1,25 @@
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\Response_Meter\TrailDebug\TrailDebug\bin\Debug\TrailDebug.exe.config
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\Response_Meter\TrailDebug\TrailDebug\bin\Debug\TrailDebug.exe
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\Response_Meter\TrailDebug\TrailDebug\bin\Debug\TrailDebug.pdb
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\Response_Meter\TrailDebug\TrailDebug\obj\Debug\TrailDebug.csprojResolveAssemblyReference.cache
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\Response_Meter\TrailDebug\TrailDebug\obj\Debug\TrailDebug.exe
+C:\Users\giovanni.sanabria\Documents\Visual Studio 2013\Projects\Response_Meter\TrailDebug\TrailDebug\obj\Debug\TrailDebug.pdb
+D:\Sql\Projects\Response_Meter\TrailDebug\TrailDebug\bin\Debug\TrailDebug.exe.config
+D:\Sql\Projects\Response_Meter\TrailDebug\TrailDebug\bin\Debug\TrailDebug.exe
+D:\Sql\Projects\Response_Meter\TrailDebug\TrailDebug\bin\Debug\TrailDebug.pdb
+D:\Sql\Projects\Response_Meter\TrailDebug\TrailDebug\obj\Debug\TrailDebug.csproj.CoreCompileInputs.cache
+D:\Sql\Projects\Response_Meter\TrailDebug\TrailDebug\obj\Debug\TrailDebug.exe
+D:\Sql\Projects\Response_Meter\TrailDebug\TrailDebug\obj\Debug\TrailDebug.pdb
+D:\Projects C#\TrailDebug\TrailDebug\bin\Debug\TrailDebug.exe.config
+D:\Projects C#\TrailDebug\TrailDebug\bin\Debug\TrailDebug.exe
+D:\Projects C#\TrailDebug\TrailDebug\bin\Debug\TrailDebug.pdb
+D:\Projects C#\TrailDebug\TrailDebug\obj\Debug\TrailDebug.csproj.CoreCompileInputs.cache
+D:\Projects C#\TrailDebug\TrailDebug\obj\Debug\TrailDebug.exe
+D:\Projects C#\TrailDebug\TrailDebug\obj\Debug\TrailDebug.pdb
+\\desarrollo-01\Compartida\TrailDebug\TrailDebug\bin\Debug\TrailDebug.exe.config
+\\desarrollo-01\Compartida\TrailDebug\TrailDebug\bin\Debug\TrailDebug.exe
+\\desarrollo-01\Compartida\TrailDebug\TrailDebug\bin\Debug\TrailDebug.pdb
+\\desarrollo-01\Compartida\TrailDebug\TrailDebug\obj\Debug\TrailDebug.csprojAssemblyReference.cache
+\\desarrollo-01\Compartida\TrailDebug\TrailDebug\obj\Debug\TrailDebug.csproj.CoreCompileInputs.cache
+\\desarrollo-01\Compartida\TrailDebug\TrailDebug\obj\Debug\TrailDebug.exe
+\\desarrollo-01\Compartida\TrailDebug\TrailDebug\obj\Debug\TrailDebug.pdb

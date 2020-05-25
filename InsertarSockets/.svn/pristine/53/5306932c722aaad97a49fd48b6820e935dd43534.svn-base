@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="unity" type="Microsoft.Practices.Unity.Configuration.UnityConfigurationSection, Microsoft.Practices.Unity.Configuration" />
+  </configSections>
+  <unity xmlns="http://schemas.microsoft.com/practices/2010/unity">
+    <assembly name="Primestone.PrimeRead.Infrastructure.Queue" />
+    <assembly name="Primestone.PrimeRead.Infrastructure.Serialization" />
+    <assembly name="Primestone.PrimeRead.Infrastructure.CrossCutting.Core" />
+    <container name="default">
+      <!--this is the default container-->
+      <register type="Primestone.PrimeRead.Infrastructure.Queue.Contracts.IQueueHandler" mapTo="Primestone.PrimeRead.Infrastructure.Queue.Impl.RabbitMQHandler">
+        <lifetime type="singleton" />
+      </register>
+      <register type="Primestone.PrimeRead.Infrastructure.Serialization.Contracts.ISerializer" mapTo="Primestone.PrimeRead.Infrastructure.Serialization.Impl.MsgPackReadingsSerializer">
+        <lifetime type="singleton" />
+      </register>
+    </container>
+  </unity>
+</configuration>
